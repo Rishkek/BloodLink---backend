@@ -18,7 +18,7 @@ conn = sqlite3.connect('hospitals.db')
 cursor = conn.cursor()
 
 # 2. Add the new columns
-new_columns = [("Temperature", "REAL"), ("Weather", "TEXT"), ("Rain_mm", "REAL")]
+new_columns = [("Temperature", "REAL"), ("Weather", "TEXT"), ("Rain_mm", "REAL"), ("Altitude", "REAL")]
 for col_name, data_type in new_columns:
     try:
         cursor.execute(f"ALTER TABLE hospitals ADD COLUMN {col_name} {data_type}")
@@ -57,14 +57,19 @@ for i, (hospital_id, name, location) in enumerate(hospitals, start=1):
             weather_code = response["current"]["weather_code"]
             weather_desc = get_weather_desc(weather_code)
 
+            # ---> PUT ALTITUDE EXACTLY HERE <---
+            # It grabs "elevation" from the root of the JSON response
+            altitude = response.get("elevation", 0.0)
+
             # Update this specific hospital's row in the database
             cursor.execute("""
                            UPDATE hospitals
                            SET Temperature = ?,
                                Weather     = ?,
-                               Rain_mm     = ?
+                               Rain_mm     = ?,
+                               Altitude    = ?
                            WHERE id = ?
-                           """, (temp, weather_desc, rain, hospital_id))
+                           """, (temp, weather_desc, rain, altitude, hospital_id))
 
     except Exception as e:
         print(f"      -> Failed to update {name} (ID: {hospital_id}). Error: {e}")
