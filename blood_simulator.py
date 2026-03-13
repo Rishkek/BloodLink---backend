@@ -13,15 +13,17 @@ except ImportError:
 
 BLOOD_GROUPS = ['O_pos', 'O_neg', 'A_pos', 'A_neg', 'B_pos', 'B_neg', 'AB_pos', 'AB_neg']
 
-# separated 'use_prob' (high chance) and 'don_prob' (low chance)
+# Real-world rarity percentages to dictate how restocks are ordered
+DISTRIBUTION = [0.37, 0.01, 0.22, 0.005, 0.32, 0.005, 0.069, 0.001]
+
 SIMULATION_PROFILES = {
-    '1': {'use_prob': 0.50, 'don_prob': 0.15, 'use_min': 1, 'use_max': 2, 'don_min': 15, 'don_max': 30},  # Excellent
-    '2': {'use_prob': 0.60, 'don_prob': 0.12, 'use_min': 1, 'use_max': 3, 'don_min': 15, 'don_max': 25},  # Good
-    '3': {'use_prob': 0.70, 'don_prob': 0.10, 'use_min': 1, 'use_max': 3, 'don_min': 10, 'don_max': 25},  # Stable
-    '4': {'use_prob': 0.80, 'don_prob': 0.08, 'use_min': 2, 'use_max': 4, 'don_min': 10, 'don_max': 20},  # Low risk
-    '5': {'use_prob': 0.85, 'don_prob': 0.05, 'use_min': 2, 'use_max': 5, 'don_min': 10, 'don_max': 20},  # Medium risk
-    '6': {'use_prob': 0.90, 'don_prob': 0.03, 'use_min': 3, 'use_max': 6, 'don_min': 10, 'don_max': 15},  # High risk
-    '7': {'use_prob': 0.95, 'don_prob': 0.01, 'use_min': 4, 'use_max': 8, 'don_min': 5, 'don_max': 15},  # Critical
+    '1': {'use_prob': 0.50, 'don_prob': 0.15, 'use_min': 1, 'use_max': 2, 'don_min': 15, 'don_max': 30},
+    '2': {'use_prob': 0.60, 'don_prob': 0.12, 'use_min': 1, 'use_max': 3, 'don_min': 15, 'don_max': 25},
+    '3': {'use_prob': 0.70, 'don_prob': 0.10, 'use_min': 1, 'use_max': 3, 'don_min': 10, 'don_max': 25},
+    '4': {'use_prob': 0.80, 'don_prob': 0.08, 'use_min': 2, 'use_max': 4, 'don_min': 10, 'don_max': 20},
+    '5': {'use_prob': 0.85, 'don_prob': 0.05, 'use_min': 2, 'use_max': 5, 'don_min': 10, 'don_max': 20},
+    '6': {'use_prob': 0.90, 'don_prob': 0.03, 'use_min': 3, 'use_max': 6, 'don_min': 10, 'don_max': 15},
+    '7': {'use_prob': 0.95, 'don_prob': 0.01, 'use_min': 4, 'use_max': 8, 'don_min': 5, 'don_max': 15},
 }
 
 # The minimum safe threshold of blood required based on hospital size
@@ -102,14 +104,12 @@ def simulate_blood_flow(sim_key):
         hit_zero = False
 
         for i in range(len(BLOOD_GROUPS)):
-            # 1. CONSTANT USAGE: Independent high probability roll
             if random.random() < profile['use_prob']:
                 used_amount = random.randint(profile['use_min'], profile['use_max'])
                 if inventory[i] - used_amount <= 0:
                     hit_zero = True
                 inventory[i] = max(0, inventory[i] - used_amount)
 
-            # 2. RARE DONATION: Independent low probability roll
             if random.random() < profile['don_prob']:
                 donated_amount = random.randint(profile['don_min'], profile['don_max'])
                 inventory[i] += donated_amount
@@ -119,13 +119,27 @@ def simulate_blood_flow(sim_key):
 
         min_required = MIN_REQUIREMENTS.get(hosp_size, 50)
 
+        # Generating the detailed Ticket
         if hit_zero or new_total < min_required:
             required_units = max(min_required - new_total, 15)
-            tickets.append({
+
+            ticket_data = {
                 "Sl.no": hosp_id,
                 "Hospital Name": hosp_name,
-                "Required Units": required_units
-            })
+                "Total Required": required_units
+            }
+
+            # Distribute the required units across the 8 blood types
+            for i, bg in enumerate(BLOOD_GROUPS):
+                req_amount = int(required_units * DISTRIBUTION[i])
+
+                # Failsafe: If a specific blood type completely ran out, force a request for at least 1 unit
+                if inventory[i] <= 0 and req_amount == 0:
+                    req_amount = 1
+
+                ticket_data[f"Req_{bg}"] = req_amount
+
+            tickets.append(ticket_data)
 
     cursor.executemany("""
                        UPDATE hospitals
