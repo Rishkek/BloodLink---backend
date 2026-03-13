@@ -1,136 +1,136 @@
 id,name,location,pincode,O_pos,O_neg,A_pos,A_neg,B_pos,B_neg,AB_pos,AB_neg,Total_Units,Temperature,Weather,Rain_mm,Size,Altitude
-157,Chord Road Hospital Pvt Ltd,"12.998121, 77.540484",560079,423,29,67,8,467,50,70,0,1114,30.5,Partly cloudy,0.0,Large,925.0
-158,Pristline Hospital,"12.997893, 77.543613",560079,92,73,66,0,101,15,58,10,415,30.4,Partly cloudy,0.0,Large,932.0
-159,Manipal Northside Hospital,"13.001128, 77.563929",560003,123,18,90,0,100,66,46,80,523,30.9,Partly cloudy,0.0,Big,919.0
-160,Mallya Audikesh Diagnostics Center,"12.981505, 77.601194",560001,91,126,110,0,75,68,113,46,629,30.8,Partly cloudy,0.0,Big,927.0
-161,Mallige Medical Centre,"12.985247, 77.580385",560001,640,0,0,0,0,0,84,0,724,30.9,Partly cloudy,0.0,Big,923.0
-162,Government Maternity Hospital,"12.998860, 77.581742",Unknown,33,44,72,0,9,59,84,166,467,30.9,Partly cloudy,0.0,Medium,915.0
-163,Soujanya Clinic,"12.968119, 77.543250",Unknown,0,0,0,0,0,0,0,4,4,30.8,Partly cloudy,0.0,Small,876.0
-164,Hospital,"13.004364, 77.565296",Unknown,12,0,0,1,0,0,0,45,58,30.8,Partly cloudy,0.0,Large,940.0
-165,Suprabha Hospital,"13.007938, 77.546906",Unknown,111,54,77,25,151,143,71,141,773,30.4,Partly cloudy,0.0,Large,932.0
-166,Sangolli Nursing Home,"13.008356, 77.546927",Unknown,19,0,0,342,31,0,22,11,425,30.5,Partly cloudy,0.0,Medium,929.0
-167,Diacon Hospital,"13.003768, 77.549834",560010,37,0,339,0,78,2,80,68,604,30.5,Partly cloudy,0.0,Large,918.0
-168,Namratha Hospital,"13.004786, 77.543073",Unknown,28,145,622,0,22,0,0,0,817,30.6,Partly cloudy,0.0,Large,903.0
-170,Fortis Hospital,"13.002241, 77.549088",560086,0,0,3,0,418,0,101,0,522,30.6,Partly cloudy,0.0,Large,914.0
-171,Citi Hospital,"12.995651, 77.551070",560010,86,0,27,9,62,17,118,25,344,30.6,Partly cloudy,0.0,Large,913.0
-172,"Vasan Eye Care Hospital, Rajaji Nagar","12.999522, 77.550533",560010,74,30,58,67,41,140,85,20,515,30.5,Partly cloudy,0.0,Big,923.0
-173,Ananya Hospital,"12.999821, 77.550450",560010,0,70,0,71,198,0,111,0,450,30.5,Partly cloudy,0.0,Large,923.0
-174,Baptist,"12.997091, 77.571977",Unknown,205,10,12,0,19,9,256,0,511,30.9,Partly cloudy,0.0,Big,915.0
-175,Shivakrupa Hospital,"12.973967, 77.547914",Unknown,79,40,82,14,72,0,18,131,436,30.8,Partly cloudy,0.0,Large,870.0
-176,"Sri Maruthi hospital, Sheshadripuram","12.992644, 77.574205",560020,372,1,0,2,8,63,265,0,711,31.0,Partly cloudy,0.0,Big,902.0
-177,"Gayathri Hospital, Bengaluru Urban","12.974405, 77.542682",560040,39,0,16,0,435,0,0,15,505,30.8,Partly cloudy,0.0,Large,883.0
-178,Cloud Nine Hospital,"13.007874, 77.562532",Unknown,35,155,0,123,671,0,217,46,1247,30.8,Partly cloudy,0.0,Large,938.0
-179,"Nayak Hospital, Gayathri Nagar","12.999386, 77.560640",560021,88,70,90,49,52,40,77,98,564,30.5,Partly cloudy,0.0,Large,915.0
-180,Shanbhag Hospital,"12.985688, 77.543542",560079,271,11,4,0,3,0,0,0,289,30.7,Partly cloudy,0.0,Large,893.0
-181,Trupti Nursing Home,"12.994657, 77.539754",560079,0,0,0,19,4,0,15,17,55,30.5,Partly cloudy,0.0,Medium,923.0
-182,Krupa Medical center,"13.000431, 77.541166",Unknown,171,20,84,40,97,14,18,43,487,30.5,Partly cloudy,0.0,Large,920.0
-183,Penta Care Ayurvedic Hospital,"12.973689, 77.536948",560040,72,0,1,100,0,0,0,0,173,30.7,Partly cloudy,0.0,Big,893.0
-184,Shreya Poly Clinic,"12.972913, 77.539472",560040,0,0,0,0,0,0,0,0,0,30.7,Partly cloudy,0.0,Medium,897.0
-185,Pragathi Ayurvedic Center,"12.984370, 77.555666",Unknown,0,0,0,0,0,153,135,96,384,30.7,Partly cloudy,0.0,Big,899.0
-186,Leela Hospital and Diagnostic Center,"13.000267, 77.569489",560003,20,23,279,0,22,0,39,42,425,30.8,Partly cloudy,0.0,Large,931.0
-187,Dr. Rajkumar Blood Bank,"12.968031, 77.587822",Unknown,85,96,182,82,616,10,52,175,1298,30.9,Partly cloudy,0.0,Big,916.0
-188,"Shifa Hospital, Bengaluru Urban","12.990011, 77.598811",Unknown,27,338,232,394,4,299,489,207,1990,30.9,Partly cloudy,0.0,Large,920.0
-189,Hospital,"12.976705, 77.542417",Unknown,507,43,17,0,414,0,0,0,981,30.8,Partly cloudy,0.0,Large,881.0
-190,Dr Raos Maternity Hospital,"12.985042, 77.546048",560079,0,0,0,0,0,0,0,0,0,30.7,Partly cloudy,0.0,Medium,894.0
-191,Shiva Kumaraswamy Building,"12.971705, 77.549372",Unknown,671,0,4,0,15,52,0,0,742,30.8,Partly cloudy,0.0,Large,875.0
-192,Dr Solankis Eye Hospital,"12.995163, 77.573814",560020,4,12,24,0,13,0,45,39,137,31.0,Partly cloudy,0.0,Small,903.0
-193,Sri Sanjeevini Cold Laser Therapy,"13.005392, 77.571335",560003,0,0,8,0,0,0,0,0,8,30.8,Partly cloudy,0.0,Small,928.0
-194,St. Martha's Heart Centre,"12.970544, 77.583477",560001,145,173,20,278,111,413,378,198,1716,30.9,Partly cloudy,0.0,Big,923.0
-195,Desai Nursing Home,"12.986374, 77.579315",560001,70,50,47,42,64,17,215,299,804,30.9,Partly cloudy,0.0,Medium,919.0
-196,Fortis Hospital,"12.988165, 77.554818",560010,59,2,17,0,37,0,30,52,197,30.6,Partly cloudy,0.0,Big,910.0
-197,Ayushman Ayurvedic therapy centre,"12.994616, 77.602387",Unknown,70,36,94,93,94,78,72,131,668,30.8,Partly cloudy,0.0,Small,933.0
-198,Pristine Hospital,"12.998423, 77.540389",560010,35,0,44,22,35,118,0,0,254,30.5,Partly cloudy,0.0,Large,924.0
-199,Arogya Kendra,"12.973589, 77.544328",560040,12,0,0,0,20,0,1,0,33,30.8,Partly cloudy,0.0,Big,882.0
-200,The Family Doctor Malleswaram,"13.002969, 77.552667",560010,0,0,0,0,0,0,0,0,0,30.6,Partly cloudy,0.0,Medium,910.0
-201,V Care Medical Systems P Ltd,"12.978705, 77.540358",Unknown,12,0,0,0,0,0,0,0,12,30.8,Partly cloudy,0.0,Big,882.0
-202,Saikrupa Hospital For Women's and Surgical Centre,"12.969166, 77.535192",560040,637,0,8,0,0,48,13,18,724,30.8,Partly cloudy,0.0,Large,881.0
-203,Cutis Academy of Cutaneous Sciences,"12.976812, 77.544909",560040,0,0,0,0,0,0,0,0,0,30.8,Partly cloudy,0.0,Big,872.0
-204,Vijayanagar Global Hospital,"12.971790, 77.537286",560040,0,0,14,3,697,0,0,0,714,30.7,Partly cloudy,0.0,Large,891.0
-205,The Homoeo World,"12.994720, 77.571588",560003,7,9,8,0,58,13,0,0,95,31.0,Partly cloudy,0.0,Big,908.0
-206,Tamara Hospital & IVF Centre,"13.004450, 77.553076",560010,577,7,32,65,13,5,37,14,750,30.5,Partly cloudy,0.0,Large,924.0
-207,ChanRe Rheumatology and Immunology Center and Research,"12.995573, 77.535421",Unknown,283,302,0,132,175,0,0,292,1184,30.6,Partly cloudy,0.0,Big,912.0
-208,"Manasa Hospital, Vijayanagar","12.970946, 77.545106",560040,51,11,31,0,50,7,0,0,150,30.8,Partly cloudy,0.0,Big,880.0
-209,Cauvery Orthopaedic Centre,"12.998489, 77.550422",560010,0,0,0,66,3,0,0,0,69,30.5,Partly cloudy,0.0,Moderate,925.0
-210,"Nethradhama Superspeciality Eye Hospital, Rajajinagar","12.997613, 77.550942",560021,11,17,0,0,0,218,13,14,273,30.5,Partly cloudy,0.0,Big,919.0
-211,Hosmat Hospital,"13.008000, 77.583748",Unknown,0,0,0,0,0,0,0,0,0,30.7,Partly cloudy,0.0,Large,946.0
-212,Altius Hospital,"12.984954, 77.556922",560010,70,13,43,6,28,14,28,44,246,30.7,Partly cloudy,0.0,Large,896.0
-213,Bangalore Diabetes Hospital,"12.991841, 77.596853",Unknown,327,296,0,120,0,228,451,151,1573,30.9,Partly cloudy,0.0,Big,918.0
-214,Vathsalya Speciality Hospital,"12.993975, 77.539180",560079,417,18,0,0,419,68,331,250,1503,30.5,Partly cloudy,0.0,Large,919.0
-215,Maruthi Hospital,"12.967761, 77.541328",560072,65,35,30,48,0,24,2,0,204,30.8,Partly cloudy,0.0,Big,876.0
-216,The Eye Surgical Centre,"12.982195, 77.549314",560010,64,60,52,77,41,21,17,158,490,30.7,Partly cloudy,0.0,Small,885.0
-217,Dr. Agrawal's Eye Hospital,"12.999898, 77.550112",560004,0,10,0,62,49,17,0,0,138,30.5,Partly cloudy,0.0,Small,923.0
-218,Ashok Hospital,"12.994891, 77.534798",560079,566,57,428,0,7,175,0,0,1233,30.5,Partly cloudy,0.0,Large,915.0
-219,Dr. B. Venkatasubbarao Memorial Hospital,"12.998198, 77.568151",560003,33,14,22,37,29,60,22,36,253,30.9,Partly cloudy,0.0,Large,923.0
-220,Jupiter Hospital And Institute Of Vascular Surgery,"12.999846, 77.566365",560003,96,56,60,66,85,80,116,75,634,30.8,Partly cloudy,0.0,Large,932.0
-221,Radha Maternity and Surgical Hospital,"12.969044, 77.568854",560053,141,35,993,52,159,66,26,62,1534,31.0,Partly cloudy,0.0,Large,903.0
-222,"Hitech Kidney Stone Hospital, Bengaluru Urban","12.987810, 77.580983",560001,159,55,62,303,68,36,53,48,784,30.9,Partly cloudy,0.0,Big,924.0
-223,Sri Dhavantari Ayurveda Hoapital,"12.982219, 77.559937",560010,66,18,16,76,17,0,13,56,262,30.7,Partly cloudy,0.0,Large,895.0
-224,Vaidyam Hospital,"12.984551, 77.552832",560040,0,0,0,124,0,3,94,0,221,30.6,Partly cloudy,0.0,Large,910.0
-225,Suresh Hospital - Bangalore,"12.989774, 77.555101",560010,73,36,42,22,71,33,42,16,335,30.6,Partly cloudy,0.0,Large,908.0
-226,Lakshmi Maternity Home,"13.005823, 77.569451",560055,37,16,75,69,52,64,0,106,419,30.8,Partly cloudy,0.0,Medium,928.0
-227,Manjunatha Maternity Home and Surgical Centre,"13.007727, 77.569699",560055,1,0,34,39,5,256,0,0,335,30.8,Partly cloudy,0.0,Medium,937.0
-228,Samprathi Eye Hospital And Squint Centre,"12.993281, 77.580691",560020,7,12,0,1,10,0,5,0,35,30.9,Partly cloudy,0.0,Small,921.0
-229,Shankara Nethralaya Eye Hospital,"13.008995, 77.540619",560096,56,2,18,82,91,22,54,24,349,30.6,Partly cloudy,0.0,Small,903.0
-230,ChanRe Rheumatology and Immunology Center and Research,"12.999208, 77.550269",560010,62,0,70,43,128,33,162,45,543,30.5,Partly cloudy,0.0,Big,923.0
-231,Malleswaram Eye Day Care Hospital - Bengalore,"12.996668, 77.571604",560003,0,147,23,8,32,22,3,0,235,30.9,Partly cloudy,0.0,Small,917.0
-232,Mahaveer Eye Hospital Private Limited,"12.993355, 77.572959",560020,0,17,29,0,10,17,15,52,140,31.0,Partly cloudy,0.0,Small,903.0
-233,Bilva Hospital,"12.998983, 77.580202",560003,32,13,52,75,43,40,29,0,284,30.9,Partly cloudy,0.0,Large,919.0
-234,"Anugraha Hospital, Vijayanagar","12.976565, 77.545588",560079,21,52,30,58,28,40,52,29,310,30.8,Partly cloudy,0.0,Big,871.0
-235,Amar Hospital,"12.971182, 77.578123",560053,123,31,35,263,64,79,51,63,709,30.9,Partly cloudy,0.0,Large,917.0
-236,"Supriya Hospital, Bengaluru Urban","12.992904, 77.558802",560021,3,0,0,0,37,0,56,0,96,30.7,Partly cloudy,0.0,Large,894.0
-237,Sidvin Hospital Pvt Ltd,"12.982442, 77.549368",560010,455,13,68,76,526,43,40,44,1265,30.7,Partly cloudy,0.0,Large,885.0
-238,Place Guttahalli Maternity Home,"12.998824, 77.581989",560003,51,0,4,9,14,97,0,0,175,30.9,Partly cloudy,0.0,Medium,915.0
-239,Namratha Nursing And Maternity Home,"13.004575, 77.543273",560086,0,0,12,21,38,132,0,3,206,30.1,Partly cloudy,0.0,Medium,903.0
-240,Spine Care And Ortho Care Hospital,"12.974513, 77.549388",560086,0,0,0,0,0,0,0,0,0,30.3,Partly cloudy,0.0,Big,880.0
-241,Tanmay Hospital,"12.973376, 77.547403",560040,17,0,9,0,0,0,0,0,26,30.4,Partly cloudy,0.0,Large,868.0
-242,Vijayanagar Hospital,"12.971629, 77.537197",560040,15,21,714,0,31,34,100,0,915,30.2,Partly cloudy,0.0,Large,892.0
-243,"Punarjyoti Eye Hospital, Bengaluru Urban","12.968530, 77.584396",560002,54,53,12,25,11,25,191,314,685,30.5,Partly cloudy,0.0,Small,919.0
-244,Sreeniwasa Hospital,"12.973271, 77.572536",560053,1173,378,867,133,1188,0,10,0,3749,30.6,Partly cloudy,0.0,Large,905.0
-245,Magadi Road Maternity Home,"12.974125, 77.561823",560023,41,85,17,63,34,79,165,3,487,30.2,Partly cloudy,0.0,Medium,887.0
-246,Pristine Hospital,"12.998001, 77.543278",560086,61,19,40,0,72,13,183,23,411,29.9,Partly cloudy,0.0,Large,936.0
-247,"Punya Hospital, Bengaluru Urban","12.986216, 77.537485",560079,0,0,0,0,0,0,0,0,0,30.1,Partly cloudy,0.0,Large,908.0
-248,Sri Ranga Arogyadhama,"12.998624, 77.542782",560086,0,0,0,0,0,0,104,0,104,29.9,Partly cloudy,0.0,Large,931.0
-249,Rotary Eye Hospital (A Unit Of Bangalore North Rotary Trust),"12.981723, 77.554936",560010,161,93,82,91,166,79,68,31,771,30.2,Partly cloudy,0.0,Large,896.0
-250,Gurukripa Hospital and Health Care Centre,"13.000180, 77.546115",560086,47,33,82,37,31,32,2,90,354,30.0,Partly cloudy,0.0,Large,921.0
-251,"Madhu Hospital, Bengaluru Urban","12.978316, 77.542960",560079,126,52,73,45,74,69,42,88,569,30.3,Partly cloudy,0.0,Large,884.0
-252,Padmashree Diagnostics,"12.974598, 77.543679",Unknown,9,0,17,0,115,38,18,0,197,30.3,Partly cloudy,0.0,Big,881.0
-253,K.C. General Hospital,"12.993382, 77.569417",560003,727,31,51,18,33,0,21,1,882,30.5,Partly cloudy,0.0,Large,910.0
-254,Yashas Neurocare,"12.985399, 77.545402",Unknown,34,14,43,59,46,13,46,12,267,30.2,Partly cloudy,0.0,Big,889.0
-255,Focus Diagnostic Center,"12.987063, 77.549951",Unknown,0,0,0,0,0,29,0,0,29,30.1,Partly cloudy,0.0,Big,905.0
-256,Kamadhenu Hospital,"12.975501, 77.534972",560040,88,17,33,0,82,47,26,17,310,30.2,Partly cloudy,0.0,Large,895.0
-257,"Goverment Hospital, Hosahalli","12.974493, 77.534205",560040,582,0,682,0,34,0,0,0,1298,30.2,Partly cloudy,0.0,Large,892.0
-258,Sriprasad Ayurveda,"12.973409, 77.546281",560040,44,122,51,0,21,42,38,21,339,30.4,Partly cloudy,0.0,Small,868.0
-259,Vidya Eye Hospital,"12.970743, 77.537768",560040,0,0,0,0,0,0,0,0,0,30.2,Partly cloudy,0.0,Small,889.0
-260,G.R. Hospital,"12.980230, 77.554882",560010,0,0,0,81,30,0,185,0,296,30.3,Partly cloudy,0.0,Large,882.0
-261,Sneha Horizon Hospital,"12.975430, 77.535800",560040,24,7,513,13,0,0,0,0,557,30.2,Partly cloudy,0.0,Large,892.0
-262,Kangroo Hospital,"12.974339, 77.542325",560040,10,15,9,0,10,3,0,0,47,30.3,Partly cloudy,0.0,Big,883.0
-263,Abhinav Hospital,"12.975749, 77.553782",560023,622,2,0,0,586,0,93,0,1303,30.4,Partly cloudy,0.0,Large,867.0
-264,Suhusannidhi Hospital,"12.969102, 77.534951",560040,553,3,52,14,64,20,0,0,706,30.3,Partly cloudy,0.0,Large,877.0
-265,Sai Ortho and Dental Centre,"12.969819, 77.536080",560040,5,0,486,0,484,0,4,0,979,30.2,Partly cloudy,0.0,Big,885.0
-266,Ammashrees Hospital,"12.979432, 77.544164",560010,45,0,56,37,76,0,23,0,237,30.3,Partly cloudy,0.0,Large,884.0
-267,Bengaluru Child Neurology and Rehabilitaion Centre,"12.973557, 77.546125",560040,0,0,0,0,0,0,0,0,0,30.4,Partly cloudy,0.0,Big,868.0
-268,Dr. Nothesh Child Specialist,"12.975423, 77.540659",560040,22,0,26,76,15,49,37,0,225,30.2,Partly cloudy,0.0,Small,885.0
-269,Manavarthapet Pregnancy Hospital,"12.970255, 77.573457",560053,0,264,177,312,0,296,60,52,1161,30.6,Partly cloudy,0.0,Medium,906.0
-270,ESI Hospital,"12.972126, 77.573351",560053,86,16,5,25,41,22,65,24,284,30.6,Partly cloudy,0.0,Large,908.0
-271,Nayanalaya Super Speciality Eye Care Centre,"13.006795, 77.571159",Unknown,0,31,0,36,0,0,0,0,67,30.4,Partly cloudy,0.0,Small,932.0
-272,Srinidhi Health Centre,"13.005821, 77.572575",Unknown,50,4,23,29,0,0,0,0,106,30.5,Partly cloudy,0.0,Medium,919.0
-273,Orthopedic & Eye Care Center,"13.005493, 77.571952",Unknown,354,0,38,0,320,38,18,0,768,30.5,Partly cloudy,0.0,Big,924.0
-274,ESI Hospital,"13.004596, 77.554003",Unknown,147,82,107,22,94,33,58,33,576,30.0,Partly cloudy,0.0,Large,922.0
-275,Ramani Orthopaedic Hospital,"13.004431, 77.578524",Unknown,694,100,19,0,933,0,477,9,2232,30.4,Partly cloudy,0.0,Large,931.0
-276,Atharva Ayurdhama Ayurvedic Hospital,"13.004314, 77.547749",Unknown,87,114,29,0,57,48,24,41,400,30.0,Partly cloudy,0.0,Large,922.0
-277,RICH CARE HOMEOPATHY,"13.001546, 77.572168",Unknown,0,32,0,0,0,0,0,0,32,30.5,Partly cloudy,0.0,Small,916.0
-278,Poornayu Ayurveda Hospital,"12.998238, 77.551173",Unknown,0,0,0,87,0,133,0,0,220,30.0,Partly cloudy,0.0,Big,919.0
-279,Appllo Diagnostic,"12.998106, 77.600813",Unknown,23,288,415,0,331,0,0,413,1470,30.4,Partly cloudy,0.0,Big,935.0
-280,Supra Diagnostics Spine Care And Ortho Care Hospital,"12.997000, 77.573004",Unknown,0,0,0,0,200,0,161,0,361,30.5,Partly cloudy,0.0,Big,911.0
-281,K.C.General Hospital,"12.996024, 77.569371",Unknown,141,43,90,47,180,24,51,64,640,30.5,Partly cloudy,0.0,Large,918.0
-282,ESIC Model Hospital,"12.991692, 77.553901",Unknown,45,124,41,44,85,23,57,35,454,30.1,Partly cloudy,0.0,Large,904.0
-283,Government Hospital,"12.990505, 77.556635",Unknown,18,0,15,0,134,65,0,0,232,30.1,Partly cloudy,0.0,Large,907.0
-284,Esi Hospital Bangalore,"12.990498, 77.553092",Unknown,5,0,0,0,0,0,0,0,5,30.1,Partly cloudy,0.0,Large,911.0
-285,Government Hospital,"12.984496, 77.555180",Unknown,54,0,19,30,30,0,21,144,298,30.2,Partly cloudy,0.0,Large,899.0
-286,Janani Clinics,"12.991850, 77.543783",560079,0,6,0,234,0,0,0,204,444,30.1,Partly cloudy,0.0,Medium,903.0
-287,PMC Hospital,"13.006505, 77.554501",Unknown,15,26,50,165,19,0,4,325,604,30.0,Partly cloudy,0.0,Large,920.0
-288,New Varalakshmi Hospital,"12.998838, 77.555096",Unknown,248,0,0,118,282,0,0,26,674,30.1,Partly cloudy,0.0,Large,901.0
-289,Apollo Cradle Children's Hospital,"13.002768, 77.553629",Unknown,95,40,84,67,95,0,84,26,491,30.1,Partly cloudy,0.0,Large,909.0
-290,Netradhama,"12.997430, 77.551029",Unknown,72,102,35,80,92,106,15,18,520,30.0,Partly cloudy,0.0,Big,917.0
-291,Hiremath Hospital,"12.975435, 77.535897",Unknown,8,0,23,0,0,0,0,18,49,30.2,Partly cloudy,0.0,Large,893.0
-292,Jindal Charitable Hospital,"12.993725, 77.553972",Unknown,42,0,0,17,130,18,11,0,218,30.1,Partly cloudy,0.0,Large,905.0
+157,Chord Road Hospital Pvt Ltd,"12.998121, 77.540484",560079,162,20,15,3,374,14,4,27,619,24.0,Clear sky,0.0,Large,925.0
+158,Pristline Hospital,"12.997893, 77.543613",560079,20,1,18,0,19,0,4,64,126,24.0,Clear sky,0.0,Large,932.0
+159,Manipal Northside Hospital,"13.001128, 77.563929",560003,170,28,8,26,126,106,29,149,642,24.6,Mostly clear,0.0,Big,919.0
+160,Mallya Audikesh Diagnostics Center,"12.981505, 77.601194",560001,51,182,145,74,12,157,245,196,1062,24.5,Mostly clear,0.0,Big,927.0
+161,Mallige Medical Centre,"12.985247, 77.580385",560001,284,0,1,0,11,0,0,0,296,24.6,Mostly clear,0.0,Big,923.0
+162,Government Maternity Hospital,"12.998860, 77.581742",Unknown,32,135,7,88,81,68,74,132,617,24.6,Mostly clear,0.0,Medium,915.0
+163,Soujanya Clinic,"12.968119, 77.543250",Unknown,2,3,0,1,2,0,6,3,17,24.4,Clear sky,0.0,Small,876.0
+164,Hospital,"13.004364, 77.565296",Unknown,30,20,11,6,33,5,23,3,131,24.5,Mostly clear,0.0,Large,940.0
+165,Suprabha Hospital,"13.007938, 77.546906",Unknown,248,153,47,239,122,117,61,172,1159,24.0,Clear sky,0.0,Large,932.0
+166,Sangolli Nursing Home,"13.008356, 77.546927",Unknown,4,0,4,260,9,5,1,9,292,24.0,Clear sky,0.0,Medium,929.0
+167,Diacon Hospital,"13.003768, 77.549834",560010,43,25,23,11,19,0,6,0,127,24.1,Clear sky,0.0,Large,918.0
+168,Namratha Hospital,"13.004786, 77.543073",Unknown,23,1,151,0,17,2,1,0,195,24.2,Clear sky,0.0,Large,903.0
+170,Fortis Hospital,"13.002241, 77.549088",560086,16,0,8,0,20,0,1,0,45,24.1,Clear sky,0.0,Large,914.0
+171,Citi Hospital,"12.995651, 77.551070",560010,21,9,10,7,17,21,23,0,108,24.1,Clear sky,0.0,Large,913.0
+172,"Vasan Eye Care Hospital, Rajaji Nagar","12.999522, 77.550533",560010,39,49,7,149,24,246,2,106,622,24.0,Clear sky,0.0,Big,923.0
+173,Ananya Hospital,"12.999821, 77.550450",560010,21,1,7,0,20,0,4,0,53,24.0,Clear sky,0.0,Large,923.0
+174,Baptist,"12.997091, 77.571977",Unknown,19,2,7,0,13,0,83,0,124,24.6,Mostly clear,0.0,Big,915.0
+175,Shivakrupa Hospital,"12.973967, 77.547914",Unknown,95,15,11,5,44,30,3,160,363,24.4,Clear sky,0.0,Large,870.0
+176,"Sri Maruthi hospital, Sheshadripuram","12.992644, 77.574205",560020,220,23,7,0,10,1,203,9,473,24.7,Mostly clear,0.0,Big,902.0
+177,"Gayathri Hospital, Bengaluru Urban","12.974405, 77.542682",560040,18,1,13,14,169,1,2,0,218,24.3,Clear sky,0.0,Large,883.0
+178,Cloud Nine Hospital,"13.007874, 77.562532",Unknown,23,52,10,4,524,2,4,11,630,24.5,Mostly clear,0.0,Large,938.0
+179,"Nayak Hospital, Gayathri Nagar","12.999386, 77.560640",560021,122,210,14,66,32,76,220,84,824,24.1,Clear sky,0.0,Large,915.0
+180,Shanbhag Hospital,"12.985688, 77.543542",560079,24,3,27,0,19,0,5,0,78,24.2,Clear sky,0.0,Large,893.0
+181,Trupti Nursing Home,"12.994657, 77.539754",560079,16,0,0,0,29,14,6,1,66,24.0,Clear sky,0.0,Medium,923.0
+182,Krupa Medical center,"13.000431, 77.541166",Unknown,37,69,13,4,23,178,9,184,517,24.1,Clear sky,0.0,Large,920.0
+183,Penta Care Ayurvedic Hospital,"12.973689, 77.536948",560040,14,0,7,3,11,0,4,2,41,24.2,Clear sky,0.0,Big,893.0
+184,Shreya Poly Clinic,"12.972913, 77.539472",560040,9,1,5,3,6,0,0,0,24,24.2,Clear sky,0.0,Medium,897.0
+185,Pragathi Ayurvedic Center,"12.984370, 77.555666",Unknown,14,0,3,0,10,0,2,2,31,24.2,Clear sky,0.0,Big,899.0
+186,Leela Hospital and Diagnostic Center,"13.000267, 77.569489",560003,25,4,13,0,27,0,7,0,76,24.5,Mostly clear,0.0,Large,931.0
+187,Dr. Rajkumar Blood Bank,"12.968031, 77.587822",Unknown,233,86,30,160,557,116,212,189,1583,24.6,Mostly clear,0.0,Big,916.0
+188,"Shifa Hospital, Bengaluru Urban","12.990011, 77.598811",Unknown,22,148,13,185,17,98,275,55,813,24.6,Mostly clear,0.0,Large,920.0
+189,Hospital,"12.976705, 77.542417",Unknown,166,0,10,2,161,0,5,0,344,24.3,Clear sky,0.0,Large,881.0
+190,Dr Raos Maternity Hospital,"12.985042, 77.546048",560079,8,0,0,0,7,2,0,2,19,24.2,Clear sky,0.0,Medium,894.0
+191,Shiva Kumaraswamy Building,"12.971705, 77.549372",Unknown,23,3,8,8,20,0,3,3,68,24.4,Clear sky,0.0,Large,875.0
+192,Dr Solankis Eye Hospital,"12.995163, 77.573814",560020,4,15,0,2,0,1,0,20,42,24.7,Mostly clear,0.0,Small,903.0
+193,Sri Sanjeevini Cold Laser Therapy,"13.005392, 77.571335",560003,3,1,2,0,17,0,6,4,33,24.5,Mostly clear,0.0,Small,928.0
+194,St. Martha's Heart Centre,"12.970544, 77.583477",560001,11,24,4,206,27,261,230,31,794,24.6,Mostly clear,0.0,Big,923.0
+195,Desai Nursing Home,"12.986374, 77.579315",560001,60,43,8,4,9,20,179,303,626,24.6,Mostly clear,0.0,Medium,919.0
+196,Fortis Hospital,"12.988165, 77.554818",560010,10,0,8,0,12,4,0,2,36,24.1,Clear sky,0.0,Big,910.0
+197,Ayushman Ayurvedic therapy centre,"12.994616, 77.602387",Unknown,15,152,6,22,3,93,95,148,534,24.5,Mostly clear,0.0,Small,933.0
+198,Pristine Hospital,"12.998423, 77.540389",560010,47,0,14,1,18,28,1,3,112,24.0,Clear sky,0.0,Large,924.0
+199,Arogya Kendra,"12.973589, 77.544328",560040,14,0,13,16,9,0,5,1,58,24.3,Clear sky,0.0,Big,882.0
+200,The Family Doctor Malleswaram,"13.002969, 77.552667",560010,4,2,6,2,8,3,0,1,26,24.1,Clear sky,0.0,Medium,910.0
+201,V Care Medical Systems P Ltd,"12.978705, 77.540358",Unknown,13,1,2,1,17,0,0,0,34,24.3,Clear sky,0.0,Big,882.0
+202,Saikrupa Hospital For Women's and Surgical Centre,"12.969166, 77.535192",560040,333,3,9,7,19,0,2,4,377,24.3,Clear sky,0.0,Large,881.0
+203,Cutis Academy of Cutaneous Sciences,"12.976812, 77.544909",560040,23,0,13,0,11,0,3,0,50,24.4,Clear sky,0.0,Big,872.0
+204,Vijayanagar Global Hospital,"12.971790, 77.537286",560040,18,0,10,10,85,0,5,0,128,24.3,Clear sky,0.0,Large,891.0
+205,The Homoeo World,"12.994720, 77.571588",560003,12,1,4,4,9,0,2,0,32,24.7,Mostly clear,0.0,Big,908.0
+206,Tamara Hospital & IVF Centre,"13.004450, 77.553076",560010,402,0,15,7,21,0,6,27,478,24.0,Clear sky,0.0,Large,924.0
+207,ChanRe Rheumatology and Immunology Center and Research,"12.995573, 77.535421",Unknown,14,0,3,1,11,1,2,0,32,24.1,Clear sky,0.0,Big,912.0
+208,"Manasa Hospital, Vijayanagar","12.970946, 77.545106",560040,19,3,6,0,16,0,0,0,44,24.3,Clear sky,0.0,Big,880.0
+209,Cauvery Orthopaedic Centre,"12.998489, 77.550422",560010,6,2,5,0,10,1,2,1,27,24.0,Clear sky,0.0,Moderate,925.0
+210,"Nethradhama Superspeciality Eye Hospital, Rajajinagar","12.997613, 77.550942",560021,14,2,6,12,10,12,7,0,63,24.1,Clear sky,0.0,Big,919.0
+211,Hosmat Hospital,"13.008000, 77.583748",Unknown,20,1,13,2,18,2,0,0,56,24.4,Mostly clear,0.0,Large,946.0
+212,Altius Hospital,"12.984954, 77.556922",560010,22,1,10,18,16,0,3,1,71,24.2,Clear sky,0.0,Large,896.0
+213,Bangalore Diabetes Hospital,"12.991841, 77.596853",Unknown,9,68,7,10,9,1,89,0,193,24.6,Mostly clear,0.0,Big,918.0
+214,Vathsalya Speciality Hospital,"12.993975, 77.539180",560079,204,5,20,0,207,0,5,105,546,24.1,Clear sky,0.0,Large,919.0
+215,Maruthi Hospital,"12.967761, 77.541328",560072,32,18,13,3,31,3,18,6,124,24.4,Clear sky,0.0,Big,876.0
+216,The Eye Surgical Centre,"12.982195, 77.549314",560010,204,135,18,127,0,102,1,204,791,24.3,Clear sky,0.0,Small,885.0
+217,Dr. Agrawal's Eye Hospital,"12.999898, 77.550112",560004,0,8,4,0,1,19,0,57,89,24.0,Clear sky,0.0,Small,923.0
+218,Ashok Hospital,"12.994891, 77.534798",560079,373,0,13,0,21,0,0,1,408,24.1,Clear sky,0.0,Large,915.0
+219,Dr. B. Venkatasubbarao Memorial Hospital,"12.998198, 77.568151",560003,20,0,12,17,22,24,15,6,116,24.6,Mostly clear,0.0,Large,923.0
+220,Jupiter Hospital And Institute Of Vascular Surgery,"12.999846, 77.566365",560003,99,1,13,47,86,257,26,78,607,24.5,Mostly clear,0.0,Large,932.0
+221,Radha Maternity and Surgical Hospital,"12.969044, 77.568854",560053,27,6,806,29,23,79,14,58,1042,24.7,Mostly clear,0.0,Large,903.0
+222,"Hitech Kidney Stone Hospital, Bengaluru Urban","12.987810, 77.580983",560001,273,164,7,330,46,25,151,110,1106,24.6,Mostly clear,0.0,Big,924.0
+223,Sri Dhavantari Ayurveda Hoapital,"12.982219, 77.559937",560010,20,2,11,67,37,1,6,0,144,24.2,Clear sky,0.0,Large,895.0
+224,Vaidyam Hospital,"12.984551, 77.552832",560040,23,0,11,1,19,0,2,0,56,24.1,Clear sky,0.0,Large,910.0
+225,Suresh Hospital - Bangalore,"12.989774, 77.555101",560010,24,25,15,12,19,4,26,9,134,24.1,Clear sky,0.0,Large,908.0
+226,Lakshmi Maternity Home,"13.005823, 77.569451",560055,23,24,6,0,10,5,1,15,84,24.5,Mostly clear,0.0,Medium,928.0
+227,Manjunatha Maternity Home and Surgical Centre,"13.007727, 77.569699",560055,6,10,7,1,3,41,0,0,68,24.5,Mostly clear,0.0,Medium,937.0
+228,Samprathi Eye Hospital And Squint Centre,"12.993281, 77.580691",560020,0,0,0,3,0,0,1,0,4,24.6,Mostly clear,0.0,Small,921.0
+229,Shankara Nethralaya Eye Hospital,"13.008995, 77.540619",560096,37,38,69,87,3,8,10,4,256,24.2,Clear sky,0.0,Small,903.0
+230,ChanRe Rheumatology and Immunology Center and Research,"12.999208, 77.550269",560010,16,11,26,53,70,72,93,23,364,24.0,Clear sky,0.0,Big,923.0
+231,Malleswaram Eye Day Care Hospital - Bengalore,"12.996668, 77.571604",560003,3,1,0,0,26,0,7,12,49,24.6,Mostly clear,0.0,Small,917.0
+232,Mahaveer Eye Hospital Private Limited,"12.993355, 77.572959",560020,0,7,3,0,1,5,2,3,21,24.7,Mostly clear,0.0,Small,903.0
+233,Bilva Hospital,"12.998983, 77.580202",560003,22,53,33,80,48,1,9,12,258,24.6,Mostly clear,0.0,Large,919.0
+234,"Anugraha Hospital, Vijayanagar","12.976565, 77.545588",560079,40,36,28,129,31,30,18,91,403,24.4,Clear sky,0.0,Big,871.0
+235,Amar Hospital,"12.971182, 77.578123",560053,93,6,15,233,19,95,3,0,464,24.6,Mostly clear,0.0,Large,917.0
+236,"Supriya Hospital, Bengaluru Urban","12.992904, 77.558802",560021,21,2,14,0,18,0,3,0,58,24.2,Clear sky,0.0,Large,894.0
+237,Sidvin Hospital Pvt Ltd,"12.982442, 77.549368",560010,108,20,12,110,197,31,4,121,603,24.3,Clear sky,0.0,Large,885.0
+238,Place Guttahalli Maternity Home,"12.998824, 77.581989",560003,8,2,2,9,8,1,0,2,32,24.6,Mostly clear,0.0,Medium,915.0
+239,Namratha Nursing And Maternity Home,"13.004575, 77.543273",560086,5,1,2,14,8,4,4,22,60,24.2,Clear sky,0.0,Medium,903.0
+240,Spine Care And Ortho Care Hospital,"12.974513, 77.549388",560086,13,2,7,0,8,0,7,0,37,24.3,Clear sky,0.0,Big,880.0
+241,Tanmay Hospital,"12.973376, 77.547403",560040,21,2,14,12,24,0,6,2,81,24.4,Clear sky,0.0,Large,868.0
+242,Vijayanagar Hospital,"12.971629, 77.537197",560040,20,0,320,5,20,0,1,5,371,24.2,Clear sky,0.0,Large,892.0
+243,"Punarjyoti Eye Hospital, Bengaluru Urban","12.968530, 77.584396",560002,0,0,1,9,6,1,116,287,420,24.6,Mostly clear,0.0,Small,919.0
+244,Sreeniwasa Hospital,"12.973271, 77.572536",560053,646,164,403,6,711,3,4,1,1938,24.7,Mostly clear,0.0,Large,905.0
+245,Magadi Road Maternity Home,"12.974125, 77.561823",560023,35,0,2,16,30,24,1,2,110,24.3,Clear sky,0.0,Medium,887.0
+246,Pristine Hospital,"12.998001, 77.543278",560086,27,3,17,6,19,35,27,7,141,24.0,Clear sky,0.0,Large,936.0
+247,"Punya Hospital, Bengaluru Urban","12.986216, 77.537485",560079,21,2,9,0,12,0,5,0,49,24.1,Clear sky,0.0,Large,908.0
+248,Sri Ranga Arogyadhama,"12.998624, 77.542782",560086,22,2,11,1,20,0,4,0,60,24.0,Clear sky,0.0,Large,931.0
+249,Rotary Eye Hospital (A Unit Of Bangalore North Rotary Trust),"12.981723, 77.554936",560010,46,8,42,55,17,4,26,33,231,24.2,Clear sky,0.0,Large,896.0
+250,Gurukripa Hospital and Health Care Centre,"13.000180, 77.546115",560086,22,36,10,7,16,91,7,107,296,24.1,Clear sky,0.0,Large,921.0
+251,"Madhu Hospital, Bengaluru Urban","12.978316, 77.542960",560079,103,52,23,100,66,97,9,46,496,24.3,Clear sky,0.0,Large,884.0
+252,Padmashree Diagnostics,"12.974598, 77.543679",Unknown,19,4,4,9,14,1,0,6,57,24.3,Clear sky,0.0,Big,881.0
+253,K.C. General Hospital,"12.993382, 77.569417",560003,720,12,22,0,18,4,56,24,856,24.6,Mostly clear,0.0,Large,910.0
+254,Yashas Neurocare,"12.985399, 77.545402",Unknown,12,1,10,25,12,9,2,2,73,24.3,Clear sky,0.0,Big,889.0
+255,Focus Diagnostic Center,"12.987063, 77.549951",Unknown,15,1,8,0,9,3,4,0,40,24.2,Clear sky,0.0,Big,905.0
+256,Kamadhenu Hospital,"12.975501, 77.534972",560040,49,0,10,23,18,1,9,23,133,24.2,Clear sky,0.0,Large,895.0
+257,"Goverment Hospital, Hosahalli","12.974493, 77.534205",560040,142,0,301,0,24,0,3,0,470,24.2,Clear sky,0.0,Large,892.0
+258,Sriprasad Ayurveda,"12.973409, 77.546281",560040,15,4,14,33,0,72,19,1,158,24.4,Clear sky,0.0,Small,868.0
+259,Vidya Eye Hospital,"12.970743, 77.537768",560040,0,0,3,0,2,1,6,0,12,24.3,Clear sky,0.0,Small,889.0
+260,G.R. Hospital,"12.980230, 77.554882",560010,24,0,7,0,19,3,3,2,58,24.3,Clear sky,0.0,Large,882.0
+261,Sneha Horizon Hospital,"12.975430, 77.535800",560040,24,0,39,6,17,0,24,0,110,24.2,Clear sky,0.0,Large,892.0
+262,Kangroo Hospital,"12.974339, 77.542325",560040,12,3,28,0,15,1,0,4,63,24.3,Clear sky,0.0,Big,883.0
+263,Abhinav Hospital,"12.975749, 77.553782",560023,263,0,13,3,69,3,0,0,351,24.4,Clear sky,0.0,Large,867.0
+264,Suhusannidhi Hospital,"12.969102, 77.534951",560040,445,0,13,0,74,2,2,0,536,24.3,Clear sky,0.0,Large,877.0
+265,Sai Ortho and Dental Centre,"12.969819, 77.536080",560040,13,0,2,2,8,0,2,1,28,24.3,Clear sky,0.0,Big,885.0
+266,Ammashrees Hospital,"12.979432, 77.544164",560010,42,4,43,0,21,3,8,0,121,24.3,Clear sky,0.0,Large,884.0
+267,Bengaluru Child Neurology and Rehabilitaion Centre,"12.973557, 77.546125",560040,12,0,1,0,6,1,0,0,20,24.4,Clear sky,0.0,Big,868.0
+268,Dr. Nothesh Child Specialist,"12.975423, 77.540659",560040,4,4,1,14,179,1,1,36,240,24.3,Clear sky,0.0,Small,885.0
+269,Manavarthapet Pregnancy Hospital,"12.970255, 77.573457",560053,5,0,1,0,6,0,0,1,13,24.7,Mostly clear,0.0,Medium,906.0
+270,ESI Hospital,"12.972126, 77.573351",560053,35,3,17,0,21,0,7,6,89,24.7,Mostly clear,0.0,Large,908.0
+271,Nayanalaya Super Speciality Eye Care Centre,"13.006795, 77.571159",Unknown,6,0,0,0,4,6,2,1,19,24.5,Mostly clear,0.0,Small,932.0
+272,Srinidhi Health Centre,"13.005821, 77.572575",Unknown,8,4,7,3,7,0,2,18,49,24.6,Mostly clear,0.0,Medium,919.0
+273,Orthopedic & Eye Care Center,"13.005493, 77.571952",Unknown,14,0,8,0,10,0,0,0,32,24.6,Mostly clear,0.0,Big,924.0
+274,ESI Hospital,"13.004596, 77.554003",Unknown,185,182,48,80,86,2,23,69,675,24.1,Clear sky,0.0,Large,922.0
+275,Ramani Orthopaedic Hospital,"13.004431, 77.578524",Unknown,298,2,16,17,677,1,93,1,1105,24.5,Mostly clear,0.0,Large,931.0
+276,Atharva Ayurdhama Ayurvedic Hospital,"13.004314, 77.547749",Unknown,21,130,13,0,18,1,4,1,188,24.1,Clear sky,0.0,Large,922.0
+277,RICH CARE HOMEOPATHY,"13.001546, 77.572168",Unknown,1,2,0,1,1,0,0,0,5,24.6,Mostly clear,0.0,Small,916.0
+278,Poornayu Ayurveda Hospital,"12.998238, 77.551173",Unknown,16,2,7,1,14,0,3,0,43,24.1,Clear sky,0.0,Big,919.0
+279,Appllo Diagnostic,"12.998106, 77.600813",Unknown,14,54,3,2,6,0,4,168,251,24.5,Mostly clear,0.0,Big,935.0
+280,Supra Diagnostics Spine Care And Ortho Care Hospital,"12.997000, 77.573004",Unknown,6,0,16,0,13,0,1,1,37,24.6,Mostly clear,0.0,Big,911.0
+281,K.C.General Hospital,"12.996024, 77.569371",Unknown,227,151,12,96,22,67,113,51,739,24.6,Mostly clear,0.0,Large,918.0
+282,ESIC Model Hospital,"12.991692, 77.553901",Unknown,40,62,18,16,22,1,7,1,167,24.2,Clear sky,0.0,Large,904.0
+283,Government Hospital,"12.990505, 77.556635",Unknown,24,3,15,3,20,0,3,1,69,24.2,Clear sky,0.0,Large,907.0
+284,Esi Hospital Bangalore,"12.990498, 77.553092",Unknown,19,0,13,2,21,6,4,0,65,24.1,Clear sky,0.0,Large,911.0
+285,Government Hospital,"12.984496, 77.555180",Unknown,19,2,18,2,15,0,1,10,67,24.2,Clear sky,0.0,Large,899.0
+286,Janani Clinics,"12.991850, 77.543783",560079,6,2,0,0,7,0,0,0,15,24.2,Clear sky,0.0,Medium,903.0
+287,PMC Hospital,"13.006505, 77.554501",Unknown,42,1,17,143,18,18,3,241,483,24.1,Clear sky,0.0,Large,920.0
+288,New Varalakshmi Hospital,"12.998838, 77.555096",Unknown,16,0,13,0,21,2,3,0,55,24.2,Clear sky,0.0,Large,901.0
+289,Apollo Cradle Children's Hospital,"13.002768, 77.553629",Unknown,22,103,29,164,102,36,8,87,551,24.1,Clear sky,0.0,Large,909.0
+290,Netradhama,"12.997430, 77.551029",Unknown,12,0,8,172,11,56,5,0,264,24.1,Clear sky,0.0,Big,917.0
+291,Hiremath Hospital,"12.975435, 77.535897",Unknown,19,1,15,1,19,3,0,0,58,24.2,Clear sky,0.0,Large,893.0
+292,Jindal Charitable Hospital,"12.993725, 77.553972",Unknown,20,0,9,2,19,1,14,13,78,24.2,Clear sky,0.0,Large,905.0

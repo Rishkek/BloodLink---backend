@@ -4,11 +4,11 @@
     <title>Medical Logistics | Command Center</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <style>
-        body { margin: 0; padding: 0; background: #121212; color: white; font-family: 'Segoe UI', Tahoma, sans-serif; display: flex; height: 100vh;}
+        body { margin: 0; padding: 0; background: #121212; color: white; font-family: 'Segoe UI', Tahoma, sans-serif; display: flex; height: 100vh; overflow: hidden;}
 
-        #sidebar { width: 350px; background: #1e1e1e; padding: 20px; box-sizing: border-box; display: flex; flex-direction: column; border-right: 1px solid #333;}
-        #map { flex: 1; height: 100%; }
-        #console-panel { width: 400px; background: #1a1a1a; padding: 20px; box-sizing: border-box; display: flex; flex-direction: column; border-left: 1px solid #333; }
+        #sidebar { width: 350px; background: #1e1e1e; padding: 20px; box-sizing: border-box; display: flex; flex-direction: column; border-right: 1px solid #333; z-index: 100;}
+        #map { flex: 1; height: 100%; position: relative;}
+        #console-panel { width: 400px; background: #1a1a1a; padding: 20px; box-sizing: border-box; display: flex; flex-direction: column; border-left: 1px solid #333; z-index: 100;}
 
         h2 { color: #ff4d4d; margin-top: 0; font-size: 20px; text-transform: uppercase; letter-spacing: 1px;}
         .queue-item { background: #2a2a2a; padding: 10px; margin-bottom: 10px; border-radius: 6px; display: flex; justify-content: space-between; align-items: center;}
@@ -20,17 +20,49 @@
         button:hover { background: #ff3333; }
         .apply-btn { width: auto; background: #4CAF50; }
 
-        .leaflet-popup-content-wrapper { background: rgba(30, 30, 30, 0.95); color: white; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; }
-        .leaflet-popup-tip { background: rgba(30, 30, 30, 0.95); }
-        .popup-title { color: #ff4d4d; font-weight: bold; margin-bottom: 5px; }
-        .blood-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5px; font-size: 12px; margin-top: 10px;}
-
         /* Flowing line animation */
         .flow-line { animation: flow 1s linear infinite; }
         @keyframes flow { from { stroke-dashoffset: 20; } to { stroke-dashoffset: 0; } }
 
         #log-container { flex: 1; overflow-y: auto; background: #111; padding: 10px; border-radius: 4px; font-family: monospace; font-size: 12px; color: #00ffcc; line-height: 1.5; }
         .log-entry { margin-bottom: 4px; border-bottom: 1px solid #222; padding-bottom: 4px; }
+
+        /* Slider Styling */
+        input[type=range] { -webkit-appearance: none; width: 100%; background: transparent; }
+        input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; height: 16px; width: 16px; border-radius: 50%; background: #00ffcc; cursor: pointer; margin-top: -6px; }
+        input[type=range]::-webkit-slider-runnable-track { width: 100%; height: 4px; cursor: pointer; background: #444; border-radius: 2px; }
+
+        /* --- NEW HOSPITAL DETAILS WIDGET --- */
+        #info-panel {
+            position: fixed;
+            right: 420px; /* Placed exactly to the left of the console panel */
+            bottom: -600px; /* Hidden off-screen initially */
+            width: 320px;
+            background: rgba(30, 30, 30, 0.95);
+            backdrop-filter: blur(8px);
+            border: 1px solid #555;
+            border-bottom: none;
+            border-radius: 12px 12px 0 0;
+            padding: 20px;
+            box-shadow: 0 -10px 30px rgba(0,0,0,0.7);
+            transition: bottom 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+            z-index: 1000;
+            box-sizing: border-box;
+        }
+        #info-panel.show {
+            bottom: 0;
+        }
+        .info-header { display: flex; justify-content: space-between; border-bottom: 1px solid #444; padding-bottom: 10px; margin-bottom: 15px; }
+        .info-header h3 { margin: 0; color: #ff4d4d; font-size: 16px; width: 85%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+        .close-btn { background: none; border: none; color: #888; cursor: pointer; font-size: 24px; padding: 0; line-height: 16px; width: auto; }
+        .close-btn:hover { color: white; background: none;}
+
+        .info-stats { font-size: 13px; color: #ccc; margin-bottom: 15px; line-height: 1.6;}
+        .info-stats span { color: white; font-weight: bold; }
+
+        .blood-grid-full { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 15px;}
+        .bg-card { background: #222; padding: 8px 12px; border-radius: 4px; font-size: 13px; display: flex; justify-content: space-between; align-items: center; border: 1px solid #333;}
+        .bg-card span { color: #ff4d4d; font-weight: bold; font-size: 15px;}
     </style>
 </head>
 <body>
@@ -49,9 +81,45 @@
         <div id="queueContainer" style="flex: 1; overflow-y: auto;"></div>
         <button onclick="executeCrisis()" style="margin-top: 15px; padding: 15px; font-size: 16px;">EXECUTE CRISIS</button>
         <button onclick="clearQueue()" style="margin-top: 10px; background: #555;">Clear Queue</button>
+
+        <div style="margin-top: 25px; padding-top: 15px; border-top: 1px solid #444;">
+            <h3 style="color: #00ffcc; margin-top: 0; font-size: 14px; display: flex; justify-content: space-between;">
+                <span>Time Multiplier</span>
+                <span id="speedValue">1x</span>
+            </h3>
+            <input type="range" id="timeSlider" min="1" max="25" step="1" value="1">
+            <div style="font-size: 10px; color: #888; margin-top: 5px; text-align: center;">1x (Realtime) ↔ 25x (Max Speed)</div>
+        </div>
     </div>
 
-    <div id="map"></div>
+    <div id="map">
+        <div id="info-panel">
+            <div class="info-header">
+                <h3 id="panel-name">Hospital Name</h3>
+                <button class="close-btn" onclick="closeInfoPanel()">&times;</button>
+            </div>
+
+            <div class="info-stats">
+                <div>Class: <span id="panel-size"></span> | Total Reserves: <span id="panel-total"></span>u</div>
+                <div>Temp: <span id="panel-temp"></span>°C | Weather: <span id="panel-weather"></span></div>
+            </div>
+
+            <h4 style="margin: 0 0 10px 0; color: #00ffcc; font-size: 14px; text-transform: uppercase;">Blood Inventory</h4>
+            <div class="blood-grid-full">
+                <div class="bg-card">O+ <span id="panel-opos"></span></div>
+                <div class="bg-card">O- <span id="panel-oneg"></span></div>
+                <div class="bg-card">A+ <span id="panel-apos"></span></div>
+                <div class="bg-card">A- <span id="panel-aneg"></span></div>
+                <div class="bg-card">B+ <span id="panel-bpos"></span></div>
+                <div class="bg-card">B- <span id="panel-bneg"></span></div>
+                <div class="bg-card">AB+ <span id="panel-abpos"></span></div>
+                <div class="bg-card">AB- <span id="panel-abneg"></span></div>
+            </div>
+
+            <button onclick="addPanelToQueue()" style="background: #ff4d4d;">+ Add to Crisis Queue</button>
+            <div style="font-size: 10px; color: #777; text-align: center; margin-top: 8px;">(Pro Tip: Ctrl+Click map dots to quick-add)</div>
+        </div>
+    </div>
 
     <div id="console-panel">
         <h2 style="color: #00ffcc;">Network Traffic</h2>
@@ -68,6 +136,20 @@
         let markers = {};
         let activePolylines = [];
         let crisisQueue = [];
+        let hospitalDataMap = {}; // Stores live data for the panel
+        let selectedHospitalId = null; // Tracks which hospital widget is open
+
+        // Timescale Slider Logic
+        const timeSlider = document.getElementById('timeSlider');
+        const speedValue = document.getElementById('speedValue');
+        timeSlider.addEventListener('input', function() { speedValue.innerText = this.value + 'x'; });
+        timeSlider.addEventListener('change', function() {
+            fetch('/api/timescale', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ timescale: parseFloat(this.value) })
+            });
+        });
 
         function extractCoords(locationStr) {
             const regex = /[-+]?\d*\.\d+/g;
@@ -76,6 +158,36 @@
             return null;
         }
 
+        // --- Widget Panel Functions ---
+        function updateInfoPanel(hosp) {
+            document.getElementById('panel-name').innerText = hosp.name;
+            document.getElementById('panel-size').innerText = hosp.Size || 'Unknown';
+            document.getElementById('panel-total').innerText = hosp.Total_Units;
+            document.getElementById('panel-temp').innerText = hosp.Temperature !== null ? hosp.Temperature : '--';
+            document.getElementById('panel-weather').innerText = hosp.Weather || '--';
+
+            document.getElementById('panel-opos').innerText = hosp.O_pos;
+            document.getElementById('panel-oneg').innerText = hosp.O_neg;
+            document.getElementById('panel-apos').innerText = hosp.A_pos;
+            document.getElementById('panel-aneg').innerText = hosp.A_neg;
+            document.getElementById('panel-bpos').innerText = hosp.B_pos;
+            document.getElementById('panel-bneg').innerText = hosp.B_neg;
+            document.getElementById('panel-abpos').innerText = hosp.AB_pos;
+            document.getElementById('panel-abneg').innerText = hosp.AB_neg;
+        }
+
+        function closeInfoPanel() {
+            document.getElementById('info-panel').classList.remove('show');
+            selectedHospitalId = null;
+        }
+
+        function addPanelToQueue() {
+            if (selectedHospitalId && hospitalDataMap[selectedHospitalId]) {
+                toggleQueue(selectedHospitalId, hospitalDataMap[selectedHospitalId].name);
+            }
+        }
+
+        // --- Queue Logic ---
         function toggleQueue(id, name) {
             const index = crisisQueue.findIndex(h => h.id === id);
             if (index > -1) crisisQueue.splice(index, 1);
@@ -118,64 +230,59 @@
             }).then(() => clearQueue());
         }
 
+        // --- Data Fetching ---
         function fetchData() {
             fetch('/api/hospitals').then(res => res.json()).then(data => {
                 data.forEach(hosp => {
+                    hospitalDataMap[hosp.id] = hosp; // Store for the panel
+
                     const coords = extractCoords(hosp.location);
                     if (!coords) return;
-                    const popupHTML = `
-                        <div class="popup-title">${hosp.name}</div>
-                        <div style="font-size: 11px; color: #aaa;">Total: ${hosp.Total_Units} Units</div>
-                        <div class="blood-grid">
-                            <div>O+: <span style="color:#ff4d4d">${hosp.O_pos}</span></div>
-                            <div>A+: <span style="color:#ff4d4d">${hosp.A_pos}</span></div>
-                            <div>B+: <span style="color:#ff4d4d">${hosp.B_pos}</span></div>
-                            <div>AB+: <span style="color:#ff4d4d">${hosp.AB_pos}</span></div>
-                        </div>
-                        <br><i>Ctrl+Click dot to add to Crisis Queue</i>
-                    `;
-                    if (markers[hosp.id]) {
-                        markers[hosp.id].setPopupContent(popupHTML);
-                    } else {
-                        // All markers start as standard Red
+
+                    if (!markers[hosp.id]) {
+                        // Create marker WITHOUT a popup
                         const marker = L.circleMarker(coords, { radius: 6, color: "#ff4d4d", fillColor: "#ff4d4d", fillOpacity: 0.8 }).addTo(map);
-                        marker.bindPopup(popupHTML);
+
+                        // New Click Event
                         marker.on('click', function(e) {
                             if (e.originalEvent.ctrlKey || e.originalEvent.metaKey) {
                                 toggleQueue(hosp.id, hosp.name);
-                                map.closePopup();
+                            } else {
+                                selectedHospitalId = hosp.id;
+                                updateInfoPanel(hospitalDataMap[hosp.id]); // Load fresh data
+                                document.getElementById('info-panel').classList.add('show'); // Slide up
                             }
                         });
                         markers[hosp.id] = marker;
                     }
                 });
+
+                // Live-update the panel's numbers if it is currently open
+                if (selectedHospitalId && hospitalDataMap[selectedHospitalId]) {
+                    updateInfoPanel(hospitalDataMap[selectedHospitalId]);
+                }
             });
         }
 
         function fetchRoutes() {
             fetch('/api/routes').then(res => res.json()).then(data => {
-                // Remove old route lines
                 activePolylines.forEach(p => map.removeLayer(p));
                 activePolylines = [];
 
-                // RESET ALL markers to Red before drawing new status colors
                 Object.values(markers).forEach(m => m.setStyle({color: '#ff4d4d', fillColor: '#ff4d4d'}));
 
                 data.forEach(route => {
-                    // Turn the Recipient Hospital GREEN
                     if (markers[route.receiver_id]) {
                         markers[route.receiver_id].setStyle({color: '#00ff00', fillColor: '#00ff00'});
                     }
 
                     route.donors.forEach(donor => {
-                        // Turn the Donor Hospital BLUE
                         if (markers[donor.donor_id]) {
                             markers[donor.donor_id].setStyle({color: '#0088ff', fillColor: '#0088ff'});
                         }
 
-                        // Draw Turquoise road routes
                         const line = L.polyline(donor.route, {
-                            color: '#40E0D0', // Turquoise
+                            color: '#40E0D0',
                             weight: 4,
                             opacity: 0.8,
                             dashArray: '10, 10',
@@ -197,10 +304,10 @@
             });
         }
 
-        // Run data fetches every second
-        setInterval(fetchData, 1000);
-        setInterval(fetchRoutes, 1000);
-        setInterval(fetchLogs, 1000);
+        // Run data fetches every 500ms
+        setInterval(fetchData, 500);
+        setInterval(fetchRoutes, 500);
+        setInterval(fetchLogs, 500);
 
         fetchData();
         fetchLogs();

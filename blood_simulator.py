@@ -18,10 +18,22 @@ SIMULATION_PROFILES = {
     '7': {'use_prob': 0.95, 'don_prob': 0.01, 'use_min': 4, 'use_max': 8, 'don_min': 5, 'don_max': 15},
 }
 
+# DRASTICALLY REDUCED to match the supply pipe logic
 MIN_REQUIREMENTS = {
-    "Large": 150, "Big": 100, "Moderate": 75,
-    "Medium": 50, "Clinic": 25, "Small": 10
+    "Large": 60, "Big": 40, "Moderate": 30,
+    "Medium": 20, "Clinic": 10, "Small": 5
 }
+
+
+def get_timescale():
+    """Reads the timescale set by the frontend slider (1x to 25x)."""
+    try:
+        if os.path.exists('timescale.txt'):
+            with open('timescale.txt', 'r') as f:
+                return max(1.0, min(2500.0, float(f.read().strip())))
+    except:
+        pass
+    return 1.0
 
 
 def update_csv():
@@ -58,7 +70,7 @@ def simulate_blood_flow(sim_key):
         inventory = list(hospital[3:])
         needs_ticket = False
 
-        base_required = MIN_REQUIREMENTS.get(hosp_size, 50)
+        base_required = MIN_REQUIREMENTS.get(hosp_size, 20)
 
         for i in range(len(BLOOD_GROUPS)):
             type_threshold = max(1, int(base_required * DISTRIBUTION[i]))
@@ -88,7 +100,8 @@ def simulate_blood_flow(sim_key):
 
             for i, bg in enumerate(BLOOD_GROUPS):
                 type_threshold = max(1, int(base_required * DISTRIBUTION[i]))
-                req_amount = type_threshold + 10 if inventory[i] < type_threshold else 0
+                # Match the exact restock target of supply_pipe (threshold + 5)
+                req_amount = type_threshold + 5 if inventory[i] < type_threshold else 0
                 ticket_data[f"Req_{bg}"] = req_amount
                 total_req += req_amount
 
@@ -121,16 +134,16 @@ def simulate_blood_flow(sim_key):
 if __name__ == "__main__":
     sim_key = get_simulation_key()
     if sim_key:
-        # Initial run
+        print("Starting Blood Simulator (Adjustable Timescale)...")
         simulate_blood_flow(sim_key)
         update_csv()
-        print("DONE")
 
         try:
             while True:
-                time.sleep(60)
+                ts = get_timescale()
+                # Base tick is 60 seconds, divided by the timescale slider
+                time.sleep(6000.0 / ts)
                 simulate_blood_flow(sim_key)
                 update_csv()
-                print("DONE")
         except KeyboardInterrupt:
             pass

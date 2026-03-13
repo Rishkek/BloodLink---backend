@@ -26,6 +26,11 @@ def run_truck_background():
     subprocess.Popen(["python", "truck_availability_controller.py"])
 
 
+def run_temperature_background():
+    print("Starting Temperature Daemon...")
+    subprocess.Popen(["python", "temperature_daemon.py"])
+
+
 # --- Routes ---
 @app.route('/')
 def index():
@@ -47,7 +52,7 @@ def get_hospitals():
 
 @app.route('/api/routes', methods=['GET'])
 def get_active_routes():
-    """Returns the currently active road routes drawn by OSRM."""
+    """Returns the currently active road routes drawn."""
     if not os.path.exists('active_routes.json'):
         return jsonify([])
     try:
@@ -77,10 +82,26 @@ def api_trigger_crisis():
     return jsonify({"status": "Crisis Initiated!"})
 
 
+@app.route('/api/timescale', methods=['POST'])
+def update_timescale():
+    """Receives the timescale multiplier and writes it for daemons to read."""
+    data = request.json
+    timescale = data.get('timescale', 1.0)
+    with open('timescale.txt', 'w') as f:
+        f.write(str(timescale))
+    return jsonify({"status": f"Timescale updated to {timescale}x"})
+
+
 if __name__ == '__main__':
-    # Start all background threads before launching the server
+    # Initialize timescale.txt to 1.0x on server start
+    if not os.path.exists('timescale.txt'):
+        with open('timescale.txt', 'w') as f:
+            f.write("1.0")
+
+    # Start ALL background threads before launching the server
     threading.Thread(target=run_simulator_background, daemon=True).start()
     threading.Thread(target=run_supply_pipe_background, daemon=True).start()
     threading.Thread(target=run_truck_background, daemon=True).start()
+    threading.Thread(target=run_temperature_background, daemon=True).start()  # <--- NEW DAEMON ADDED
 
     app.run(debug=True, port=5000)

@@ -9,11 +9,22 @@ BLOOD_GROUPS = ['O_pos', 'O_neg', 'A_pos', 'A_neg', 'B_pos', 'B_neg', 'AB_pos', 
 WEIGHTS = [0.37, 0.01, 0.22, 0.005, 0.32, 0.005, 0.069, 0.001]
 
 CRISIS_CASES = {
-    0: {'amount': 1, 'duration': 9, 'name': 'Minor'},
-    1: {'amount': 2, 'duration': 20, 'name': 'Small'},
-    2: {'amount': 3, 'duration': 30, 'name': 'Medium'},
-    3: {'amount': 4, 'duration': 35, 'name': 'Large'}
+    0: {'amount': 1, 'duration': 90, 'name': 'Minor'},
+    1: {'amount': 2, 'duration': 200, 'name': 'Small'},
+    2: {'amount': 3, 'duration': 300, 'name': 'Medium'},
+    3: {'amount': 4, 'duration': 350, 'name': 'Large'}
 }
+
+
+def get_timescale():
+    """Reads the timescale set by the frontend slider (1x to 25x)."""
+    try:
+        if os.path.exists('timescale.txt'):
+            with open('timescale.txt', 'r') as f:
+                return max(1.0, min(2500.0, float(f.read().strip())))
+    except:
+        pass
+    return 1.0
 
 
 def update_crisis_csv(hosp_ids, case_idx_map, is_active):
@@ -66,7 +77,9 @@ def execute_crisis_payload(payload):
         }
 
     for sec in range(1, max_duration + 1):
-        # 1. Fetch FRESH DB data every second to prevent stale overwrites
+        ts = get_timescale()
+
+        # Fetch FRESH DB data every tick to prevent stale overwrites
         placeholders = ','.join('?' for _ in hosp_ids)
         cursor.execute(f"SELECT id, {', '.join(BLOOD_GROUPS)} FROM hospitals WHERE id IN ({placeholders})", hosp_ids)
         fresh_data = cursor.fetchall()
@@ -95,7 +108,9 @@ def execute_crisis_payload(payload):
             """, (*inventory, new_total, hid))
 
         conn.commit()
-        time.sleep(1)
+
+        # Scale the sleep time dynamically based on the slider
+        time.sleep(1.0 / ts)
 
     update_crisis_csv(hosp_ids, case_map, is_active=False)
     # Only push to CSV at the very end to prevent locking errors

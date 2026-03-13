@@ -1,114 +1,110 @@
 Sl.no,Hospital Name,Total Required,Req_O_pos,Req_O_neg,Req_A_pos,Req_A_neg,Req_B_pos,Req_B_neg,Req_AB_pos,Req_AB_neg
-157,Chord Road Hospital Pvt Ltd,11,0,0,0,0,0,0,0,11
-158,Pristline Hospital,11,0,0,0,11,0,0,0,0
-159,Manipal Northside Hospital,11,0,0,0,11,0,0,0,0
-160,Mallya Audikesh Diagnostics Center,11,0,0,0,11,0,0,0,0
-161,Mallige Medical Centre,118,0,11,32,11,42,11,0,11
-162,Government Maternity Hospital,37,0,0,0,11,26,0,0,0
-163,Soujanya Clinic,82,13,11,12,11,13,11,11,0
-164,Hospital,208,65,11,43,0,58,11,20,0
-166,Sangolli Nursing Home,43,0,11,21,0,0,11,0,0
-167,Diacon Hospital,87,65,11,0,11,0,0,0,0
-168,Namratha Hospital,176,65,0,0,11,58,11,20,11
-170,Fortis Hospital,152,65,11,43,11,0,11,0,11
-171,Citi Hospital,54,0,11,43,0,0,0,0,0
-173,Ananya Hospital,130,65,0,43,0,0,11,0,11
-174,Baptist,96,0,0,32,11,42,0,0,11
-175,Shivakrupa Hospital,11,0,0,0,0,0,11,0,0
-176,"Sri Maruthi hospital, Sheshadripuram",85,0,0,32,0,42,0,0,11
-177,"Gayathri Hospital, Bengaluru Urban",161,65,11,43,11,0,11,20,0
-178,Cloud Nine Hospital,119,65,0,43,0,0,11,0,0
-180,Shanbhag Hospital,154,0,0,43,11,58,11,20,11
-181,Trupti Nursing Home,97,28,11,21,0,26,11,0,0
-183,Penta Care Ayurvedic Hospital,123,0,11,32,0,42,11,16,11
-184,Shreya Poly Clinic,132,28,11,21,11,26,11,13,11
-185,Pragathi Ayurvedic Center,143,47,11,32,11,42,0,0,0
-186,Leela Hospital and Diagnostic Center,145,65,0,0,11,58,11,0,0
-188,"Shifa Hospital, Bengaluru Urban",123,65,0,0,0,58,0,0,0
-189,Hospital,96,0,0,43,11,0,11,20,11
-190,Dr Raos Maternity Hospital,132,28,11,21,11,26,11,13,11
-191,Shiva Kumaraswamy Building,154,0,11,43,11,58,0,20,11
-192,Dr Solankis Eye Hospital,22,0,0,0,11,0,11,0,0
-193,Sri Sanjeevini Cold Laser Therapy,81,13,11,0,11,13,11,11,11
-194,St. Martha's Heart Centre,32,0,0,32,0,0,0,0,0
-196,Fortis Hospital,54,0,0,32,11,0,11,0,0
-198,Pristine Hospital,165,65,11,0,0,58,0,20,11
-199,Arogya Kendra,181,47,11,32,11,42,11,16,11
-200,The Family Doctor Malleswaram,132,28,11,21,11,26,11,13,11
-201,V Care Medical Systems P Ltd,181,47,11,32,11,42,11,16,11
-202,Saikrupa Hospital For Women's and Surgical Centre,123,0,11,43,11,58,0,0,0
-203,Cutis Academy of Cutaneous Sciences,181,47,11,32,11,42,11,16,11
-204,Vijayanagar Global Hospital,161,65,11,43,0,0,11,20,11
-205,The Homoeo World,117,47,0,32,11,0,0,16,11
-206,Tamara Hospital & IVF Centre,101,0,0,43,0,58,0,0,0
-207,ChanRe Rheumatology and Immunology Center and Research,59,0,0,32,0,0,11,16,0
-208,"Manasa Hospital, Vijayanagar",38,0,0,0,11,0,0,16,11
-209,Cauvery Orthopaedic Centre,145,37,11,26,0,34,11,15,11
-210,"Nethradhama Superspeciality Eye Hospital, Rajajinagar",132,47,0,32,11,42,0,0,0
-211,Hosmat Hospital,230,65,11,43,11,58,11,20,11
-212,Altius Hospital,58,0,0,0,0,58,0,0,0
-213,Bangalore Diabetes Hospital,74,0,0,32,0,42,0,0,0
-214,Vathsalya Speciality Hospital,54,0,0,43,11,0,0,0,0
-215,Maruthi Hospital,69,0,0,0,0,42,0,16,11
-217,Dr. Agrawal's Eye Hospital,47,13,0,12,0,0,0,11,11
-218,Ashok Hospital,100,0,0,0,11,58,0,20,11
-219,Dr. B. Venkatasubbarao Memorial Hospital,166,65,0,43,0,58,0,0,0
-223,Sri Dhavantari Ayurveda Hoapital,112,0,0,43,0,58,11,0,0
-224,Vaidyam Hospital,188,65,11,43,0,58,0,0,11
-226,Lakshmi Maternity Home,13,0,0,0,0,0,0,13,0
-227,Manjunatha Maternity Home and Surgical Centre,89,28,11,0,0,26,0,13,11
-228,Samprathi Eye Hospital And Squint Centre,34,0,0,12,0,0,11,0,11
-230,ChanRe Rheumatology and Immunology Center and Research,11,0,11,0,0,0,0,0,0
-231,Malleswaram Eye Day Care Hospital - Bengalore,24,13,0,0,0,0,0,0,11
-232,Mahaveer Eye Hospital Private Limited,24,13,0,0,11,0,0,0,0
-233,Bilva Hospital,134,65,0,0,0,58,0,0,11
-234,"Anugraha Hospital, Vijayanagar",89,47,0,0,0,42,0,0,0
-236,"Supriya Hospital, Bengaluru Urban",210,65,11,43,11,58,11,0,11
-238,Place Guttahalli Maternity Home,82,0,11,21,0,26,0,13,11
-239,Namratha Nursing And Maternity Home,52,28,11,0,0,0,0,13,0
-240,Spine Care And Ortho Care Hospital,181,47,11,32,11,42,11,16,11
-241,Tanmay Hospital,230,65,11,43,11,58,11,20,11
-242,Vijayanagar Hospital,145,65,0,0,11,58,0,0,11
-244,Sreeniwasa Hospital,22,0,0,0,0,0,11,0,11
-246,Pristine Hospital,11,0,0,0,11,0,0,0,0
-247,"Punya Hospital, Bengaluru Urban",230,65,11,43,11,58,11,20,11
-248,Sri Ranga Arogyadhama,210,65,11,43,11,58,11,0,11
-250,Gurukripa Hospital and Health Care Centre,143,65,0,0,0,58,0,20,0
-252,Padmashree Diagnostics,112,47,11,32,11,0,0,0,11
-253,K.C. General Hospital,69,0,0,0,0,58,11,0,0
-254,Yashas Neurocare,47,47,0,0,0,0,0,0,0
-255,Focus Diagnostic Center,170,47,11,32,11,42,0,16,11
-256,Kamadhenu Hospital,11,0,0,0,11,0,0,0,0
-257,"Goverment Hospital, Hosahalli",122,0,11,0,11,58,11,20,11
-258,Sriprasad Ayurveda,11,0,0,0,11,0,0,0,0
-259,Vidya Eye Hospital,93,13,11,12,11,13,11,11,11
-260,G.R. Hospital,199,65,11,43,0,58,11,0,11
-261,Sneha Horizon Hospital,165,65,0,0,0,58,11,20,11
-262,Kangroo Hospital,159,47,0,32,11,42,0,16,11
-263,Abhinav Hospital,76,0,0,43,11,0,11,0,11
-264,Suhusannidhi Hospital,31,0,0,0,0,0,0,20,11
-265,Sai Ortho and Dental Centre,107,47,11,0,11,0,11,16,11
-266,Ammashrees Hospital,98,65,11,0,0,0,11,0,11
-267,Bengaluru Child Neurology and Rehabilitaion Centre,181,47,11,32,11,42,11,16,11
-268,Dr. Nothesh Child Specialist,22,0,11,0,0,0,0,0,11
-269,Manavarthapet Pregnancy Hospital,54,28,0,0,0,26,0,0,0
-270,ESI Hospital,101,0,0,43,0,58,0,0,0
-271,Nayanalaya Super Speciality Eye Care Centre,71,13,0,12,0,13,11,11,11
-272,Srinidhi Health Centre,61,0,0,0,0,26,11,13,11
-273,Orthopedic & Eye Care Center,33,0,11,0,11,0,0,0,11
-275,Ramani Orthopaedic Hospital,65,0,0,43,11,0,11,0,0
-276,Atharva Ayurdhama Ayurvedic Hospital,54,0,0,43,11,0,0,0,0
-277,RICH CARE HOMEOPATHY,82,13,0,12,11,13,11,11,11
-278,Poornayu Ayurveda Hospital,159,47,11,32,0,42,0,16,11
-279,Appllo Diagnostic,85,47,0,0,11,0,11,16,0
-280,Supra Diagnostics Spine Care And Ortho Care Hospital,123,47,11,32,11,0,11,0,11
-282,ESIC Model Hospital,65,65,0,0,0,0,0,0,0
-283,Government Hospital,161,65,11,43,11,0,0,20,11
-284,Esi Hospital Bangalore,230,65,11,43,11,58,11,20,11
-285,Government Hospital,188,65,11,43,0,58,11,0,0
-286,Janani Clinics,99,28,0,21,0,26,11,13,0
-287,PMC Hospital,154,65,0,0,0,58,11,20,0
-288,New Varalakshmi Hospital,85,0,11,43,0,0,11,20,0
-289,Apollo Cradle Children's Hospital,11,0,0,0,0,0,11,0,0
-291,Hiremath Hospital,219,65,11,43,11,58,11,20,0
-292,Jindal Charitable Hospital,130,65,11,43,0,0,0,0,11
+158,Pristline Hospital,39,27,0,0,6,0,6,0,0
+161,Mallige Medical Centre,61,0,6,13,6,17,6,7,6
+163,Soujanya Clinic,12,0,0,6,0,0,6,0,0
+164,Hospital,18,0,0,18,0,0,0,0,0
+166,Sangolli Nursing Home,18,12,6,0,0,0,0,0,0
+167,Diacon Hospital,12,0,0,0,0,0,6,0,6
+168,Namratha Hospital,45,0,0,0,6,24,0,9,6
+170,Fortis Hospital,78,27,6,18,6,0,6,9,6
+171,Citi Hospital,75,27,0,18,0,24,0,0,6
+172,"Vasan Eye Care Hospital, Rajaji Nagar",13,0,0,13,0,0,0,0,0
+173,Ananya Hospital,63,27,0,18,6,0,6,0,6
+174,Baptist,31,0,0,13,6,0,6,0,6
+175,Shivakrupa Hospital,27,0,0,18,0,0,0,9,0
+176,"Sri Maruthi hospital, Sheshadripuram",36,0,0,13,6,17,0,0,0
+177,"Gayathri Hospital, Bengaluru Urban",42,27,0,0,0,0,0,9,6
+178,Cloud Nine Hospital,18,0,0,18,0,0,0,0,0
+180,Shanbhag Hospital,18,0,0,0,6,0,6,0,6
+181,Trupti Nursing Home,21,0,6,9,6,0,0,0,0
+183,Penta Care Ayurvedic Hospital,42,0,6,13,0,17,6,0,0
+184,Shreya Poly Clinic,18,0,0,0,0,0,6,6,6
+185,Pragathi Ayurvedic Center,48,0,6,13,6,17,6,0,0
+186,Leela Hospital and Diagnostic Center,18,0,0,0,6,0,6,0,6
+188,"Shifa Hospital, Bengaluru Urban",24,0,0,0,0,24,0,0,0
+189,Hospital,36,0,6,18,0,0,6,0,6
+190,Dr Raos Maternity Hospital,27,0,6,9,6,0,0,6,0
+191,Shiva Kumaraswamy Building,33,0,0,18,0,0,6,9,0
+192,Dr Solankis Eye Hospital,18,0,0,6,0,6,0,6,0
+193,Sri Sanjeevini Cold Laser Therapy,12,0,0,0,6,0,6,0,0
+194,St. Martha's Heart Centre,32,19,0,13,0,0,0,0,0
+196,Fortis Hospital,38,19,6,0,6,0,0,7,0
+198,Pristine Hospital,39,0,6,0,0,24,0,9,0
+199,Arogya Kendra,29,0,6,0,0,17,6,0,0
+200,The Family Doctor Malleswaram,18,12,0,0,0,0,0,6,0
+201,V Care Medical Systems P Ltd,51,19,0,13,0,0,6,7,6
+202,Saikrupa Hospital For Women's and Surgical Centre,33,0,0,18,0,0,6,9,0
+203,Cutis Academy of Cutaneous Sciences,41,0,6,0,6,17,6,0,6
+204,Vijayanagar Global Hospital,63,27,6,18,0,0,6,0,6
+205,The Homoeo World,61,19,0,13,0,17,6,0,6
+206,Tamara Hospital & IVF Centre,12,0,6,0,0,0,6,0,0
+207,ChanRe Rheumatology and Immunology Center and Research,42,0,6,13,0,17,0,0,6
+208,"Manasa Hospital, Vijayanagar",38,0,0,13,6,0,6,7,6
+209,Cauvery Orthopaedic Centre,33,16,0,11,6,0,0,0,0
+210,"Nethradhama Superspeciality Eye Hospital, Rajajinagar",36,0,0,13,0,17,0,0,6
+211,Hosmat Hospital,66,27,0,0,0,24,0,9,6
+212,Altius Hospital,57,0,0,18,0,24,6,9,0
+213,Bangalore Diabetes Hospital,55,19,0,13,0,17,0,0,6
+214,Vathsalya Speciality Hospital,12,0,0,0,6,0,6,0,0
+216,The Eye Surgical Centre,6,0,0,0,0,6,0,0,0
+217,Dr. Agrawal's Eye Hospital,18,6,0,0,6,0,0,6,0
+218,Ashok Hospital,27,0,6,0,6,0,6,9,0
+219,Dr. B. Venkatasubbarao Memorial Hospital,51,27,6,18,0,0,0,0,0
+222,"Hitech Kidney Stone Hospital, Bengaluru Urban",13,0,0,13,0,0,0,0,0
+223,Sri Dhavantari Ayurveda Hoapital,51,27,0,18,0,0,0,0,6
+224,Vaidyam Hospital,45,0,6,18,0,0,6,9,6
+226,Lakshmi Maternity Home,6,0,0,0,6,0,0,0,0
+227,Manjunatha Maternity Home and Surgical Centre,35,12,0,0,0,11,0,6,6
+228,Samprathi Eye Hospital And Squint Centre,36,6,6,6,0,6,6,0,6
+231,Malleswaram Eye Day Care Hospital - Bengalore,18,0,0,6,6,0,6,0,0
+232,Mahaveer Eye Hospital Private Limited,12,6,0,0,6,0,0,0,0
+235,Amar Hospital,15,0,0,0,0,0,0,9,6
+236,"Supriya Hospital, Bengaluru Urban",78,27,0,0,6,24,6,9,6
+237,Sidvin Hospital Pvt Ltd,18,0,0,18,0,0,0,0,0
+238,Place Guttahalli Maternity Home,15,0,0,9,0,0,0,6,0
+239,Namratha Nursing And Maternity Home,21,12,0,9,0,0,0,0,0
+240,Spine Care And Ortho Care Hospital,67,19,0,13,6,17,6,0,6
+241,Tanmay Hospital,33,27,0,0,0,0,6,0,0
+242,Vijayanagar Hospital,48,27,6,0,0,0,6,9,0
+243,"Punarjyoti Eye Hospital, Bengaluru Urban",12,6,6,0,0,0,0,0,0
+245,Magadi Road Maternity Home,15,0,6,9,0,0,0,0,0
+247,"Punya Hospital, Bengaluru Urban",87,27,0,18,6,24,6,0,6
+248,Sri Ranga Arogyadhama,30,0,0,18,0,0,6,0,6
+249,Rotary Eye Hospital (A Unit Of Bangalore North Rotary Trust),24,0,0,0,0,24,0,0,0
+250,Gurukripa Hospital and Health Care Centre,42,0,0,18,0,24,0,0,0
+252,Padmashree Diagnostics,20,0,0,13,0,0,0,7,0
+253,K.C. General Hospital,30,0,0,0,6,24,0,0,0
+254,Yashas Neurocare,19,19,0,0,0,0,0,0,0
+255,Focus Diagnostic Center,29,0,0,0,6,17,0,0,6
+256,Kamadhenu Hospital,48,0,6,18,0,24,0,0,0
+257,"Goverment Hospital, Hosahalli",33,0,6,0,6,0,6,9,6
+258,Sriprasad Ayurveda,6,0,0,0,0,6,0,0,0
+259,Vidya Eye Hospital,24,6,6,0,6,0,0,0,6
+260,G.R. Hospital,39,0,6,18,6,0,0,9,0
+261,Sneha Horizon Hospital,42,0,6,0,0,24,6,0,6
+262,Kangroo Hospital,32,19,0,0,6,0,0,7,0
+263,Abhinav Hospital,21,0,6,0,0,0,0,9,6
+264,Suhusannidhi Hospital,27,0,6,0,6,0,0,9,6
+265,Sai Ortho and Dental Centre,61,19,6,13,0,17,6,0,0
+266,Ammashrees Hospital,12,0,0,0,6,0,0,0,6
+267,Bengaluru Child Neurology and Rehabilitaion Centre,74,19,6,13,6,17,0,7,6
+269,Manavarthapet Pregnancy Hospital,45,12,6,9,6,0,6,6,0
+270,ESI Hospital,12,0,0,0,6,0,6,0,0
+271,Nayanalaya Super Speciality Eye Care Centre,18,0,6,6,6,0,0,0,0
+272,Srinidhi Health Centre,6,0,0,0,0,0,6,0,0
+273,Orthopedic & Eye Care Center,48,0,6,0,6,17,6,7,6
+276,Atharva Ayurdhama Ayurvedic Hospital,57,27,0,0,6,24,0,0,0
+277,RICH CARE HOMEOPATHY,24,0,0,6,0,0,6,6,6
+278,Poornayu Ayurveda Hospital,25,0,0,13,0,0,6,0,6
+279,Appllo Diagnostic,36,0,0,13,0,17,6,0,0
+280,Supra Diagnostics Spine Care And Ortho Care Hospital,44,19,6,0,6,0,6,7,0
+281,K.C.General Hospital,18,0,0,18,0,0,0,0,0
+283,Government Hospital,15,0,0,0,0,0,6,9,0
+284,Esi Hospital Bangalore,39,27,6,0,0,0,0,0,6
+285,Government Hospital,66,27,0,0,0,24,6,9,0
+286,Janani Clinics,45,12,0,9,6,0,6,6,6
+287,PMC Hospital,33,0,0,0,0,24,0,9,0
+288,New Varalakshmi Hospital,54,27,6,0,6,0,0,9,6
+290,Netradhama,48,19,6,0,0,17,0,0,6
+291,Hiremath Hospital,42,27,0,0,0,0,0,9,6
+292,Jindal Charitable Hospital,51,27,6,18,0,0,0,0,0

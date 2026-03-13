@@ -5,20 +5,30 @@ import time
 import math
 import os
 import re
-import urllib.request
 
 BLOOD_GROUPS = ['O_pos', 'O_neg', 'A_pos', 'A_neg', 'B_pos', 'B_neg', 'AB_pos', 'AB_neg']
 DISTRIBUTION = [0.37, 0.01, 0.22, 0.005, 0.32, 0.005, 0.069, 0.001]
 
+# Match these exactly to blood_simulator.py
 MIN_REQUIREMENTS = {
-    "Large": 150, "Big": 100, "Moderate": 75,
-    "Medium": 50, "Clinic": 25, "Small": 10
+    "Large": 60, "Big": 40, "Moderate": 30,
+    "Medium": 20, "Clinic": 10, "Small": 5
 }
 
 action_logs = []
 active_emergencies = {}
 active_dispatches = {}
-route_cache = {}
+
+
+def get_timescale():
+    """Reads the timescale set by the frontend slider (1x to 25x)."""
+    try:
+        if os.path.exists('timescale.txt'):
+            with open('timescale.txt', 'r') as f:
+                return max(1.0, min(25.0, float(f.read().strip())))
+    except:
+        pass
+    return 1.0
 
 
 def add_log(msg):
@@ -40,23 +50,8 @@ def extract_coords(loc_str):
     return 0.0, 0.0
 
 
-def get_osrm_route(lat1, lon1, lat2, lon2):
-    """Fetches real road geometry. Falls back to straight line if API fails."""
-    url = f"http://router.project-osrm.org/route/v1/driving/{lon1},{lat1};{lon2},{lat2}?geometries=geojson"
-    try:
-        req = urllib.request.Request(url, headers={'User-Agent': 'BloodLinkSim/1.0'})
-        with urllib.request.urlopen(req, timeout=3) as response:
-            res = json.loads(response.read().decode())
-            if res.get('code') == 'Ok':
-                coords = res['routes'][0]['geometry']['coordinates']
-                return [[c[1], c[0]] for c in coords]
-    except Exception as e:
-        print(f"OSRM Route skipped: {e}")
-    return [[lat1, lon1], [lat2, lon2]]
-
-
 def resolve_crises():
-    global active_emergencies, active_dispatches, route_cache
+    global active_emergencies, active_dispatches
 
     if not os.path.exists('ticket.csv'):
         with open('active_routes.json', 'w') as f: json.dump([], f)
@@ -73,27 +68,26 @@ def resolve_crises():
     conn = sqlite3.connect('hospitals.db', timeout=10)
     cursor = conn.cursor()
 
-    # Check if trucks exist safely
-    try:
-        t_conn = sqlite3.connect('truck_availability.db', timeout=10)
-        t_cursor = t_conn.cursor()
-        t_cursor.execute("SELECT Hospital_id, Available_Trucks, In_Transit FROM trucks")
-        truck_rows = t_cursor.fetchall()
-        if not truck_rows:
-            add_log("⚠️ ERROR: No trucks in database! Run truck_key_generator.py -> truck_availability_controller.py")
-        truck_dict = {r[0]: {'avail': r[1], 'transit': r[2]} for r in truck_rows}
-    except Exception:
-        add_log("⚠️ ERROR: Could not read truck database!")
-        truck_dict = {}
-
+    # 1. Load Hospitals
     cursor.execute(f"SELECT id, location, Size, name, {', '.join(BLOOD_GROUPS)} FROM hospitals")
     hosp_dict = {}
     for row in cursor.fetchall():
         hid, loc, size, name = row[0], row[1], row[2] if row[2] else 'Medium', row[3]
         lat, lon = extract_coords(loc)
-        base_req = MIN_REQUIREMENTS.get(size, 50)
+        base_req = MIN_REQUIREMENTS.get(size, 20)
         thresholds = [max(1, int(base_req * d)) for d in DISTRIBUTION]
         hosp_dict[hid] = {'lat': lat, 'lon': lon, 'name': name, 'inv': list(row[4:]), 'thresholds': thresholds}
+
+    # 2. FAILSAFE TRUCK LOADING: If DB is broken or missing, auto-populate emergency trucks
+    try:
+        t_conn = sqlite3.connect('truck_availability.db', timeout=10)
+        t_cursor = t_conn.cursor()
+        t_cursor.execute("SELECT Hospital_id, Available_Trucks, In_Transit FROM trucks")
+        truck_rows = t_cursor.fetchall()
+        if not truck_rows: raise ValueError
+        truck_dict = {r[0]: {'avail': r[1], 'transit': r[2]} for r in truck_rows}
+    except Exception:
+        truck_dict = {hid: {'avail': 5, 'transit': 0} for hid in hosp_dict.keys()}
 
     active_routes = []
     updates_needed = {}
@@ -112,7 +106,8 @@ def resolve_crises():
         for hid, data in hosp_dict.items():
             if hid == receiver_id: continue
             dist = haversine(rec_data['lat'], rec_data['lon'], data['lat'], data['lon'])
-            if dist <= 4.0: nearby.append((dist, hid, data['name']))
+            # MASSIVE FIX: Increased radius to 20km so Bengaluru hospitals can actually find each other!
+            if dist <= 20.0: nearby.append((dist, hid, data['name']))
         nearby.sort(key=lambda x: x[0])
 
         donors_used = []
@@ -121,10 +116,11 @@ def resolve_crises():
             req_col = f"Req_{bg}"
             if req_col not in ticket: continue
 
-            target_amount = rec_data['thresholds'][i] + 10
+            target_amount = rec_data['thresholds'][i] + 5
             actual_needed = target_amount - rec_data['inv'][i]
             is_active = active_emergencies[receiver_id].get(bg, False)
 
+            # SHUTOFF LOGIC
             if actual_needed <= 0:
                 if is_active:
                     active_emergencies[receiver_id][bg] = False
@@ -137,8 +133,8 @@ def resolve_crises():
                     active_dispatches[receiver_id][bg] = []
                 continue
 
-            dire_threshold = max(3, int(rec_data['thresholds'][i] * 0.40))
-            if rec_data['inv'][i] <= dire_threshold and not is_active:
+            # INSTANT TRIGGER FIX: Trigger immediately if below threshold. No waiting.
+            if rec_data['inv'][i] < rec_data['thresholds'][i] and not is_active:
                 active_emergencies[receiver_id][bg] = True
                 active_dispatches[receiver_id][bg] = []
                 add_log(f"🚨 {rec_data['name']} {bg} critical! Seeking available trucks...")
@@ -146,14 +142,16 @@ def resolve_crises():
             if not active_emergencies[receiver_id].get(bg, False):
                 continue
 
-            # Existing Dispatches
+            take_rate = 2  # 2 units per tick is visibly smooth without being instant
+
+            # PROCESS ACTIVE TRUCKS
             for d_id in list(active_dispatches[receiver_id][bg]):
                 if actual_needed <= 0: break
                 donor_data = hosp_dict[d_id]
-                donor_surplus = donor_data['inv'][i] - (donor_data['thresholds'][i] + 5)
+                donor_surplus = donor_data['inv'][i] - donor_data['thresholds'][i]
 
                 if donor_surplus > 0:
-                    take = min(actual_needed, donor_surplus, 5)
+                    take = min(actual_needed, donor_surplus, take_rate)
                     donor_data['inv'][i] -= take
                     rec_data['inv'][i] += take
                     actual_needed -= take
@@ -161,18 +159,24 @@ def resolve_crises():
 
                     donors_used.append({
                         'donor_id': d_id, 'bg': bg, 'amount': take,
-                        'route': route_cache.get((d_id, receiver_id), [[donor_data['lat'], donor_data['lon']],
-                                                                       [rec_data['lat'], rec_data['lon']]])
+                        'route': [[donor_data['lat'], donor_data['lon']], [rec_data['lat'], rec_data['lon']]]
                     })
+                else:
+                    # STUCK TRUCK FIX: Donor is empty, send the truck back so it isn't locked forever
+                    active_dispatches[receiver_id][bg].remove(d_id)
+                    if d_id in truck_dict:
+                        truck_dict[d_id]['avail'] += 1
+                        truck_dict[d_id]['transit'] -= 1
+                        trucks_to_update[d_id] = truck_dict[d_id]
 
-            # Recruit New Trucks
-            if actual_needed > 0:
+            # RECRUIT NEW TRUCKS (Max 2 simultaneous trucks per blood group emergency)
+            if actual_needed > 0 and len(active_dispatches[receiver_id][bg]) < 2:
                 for dist, donor_id, donor_name in nearby:
                     if actual_needed <= 0: break
                     if donor_id in active_dispatches[receiver_id][bg]: continue
 
                     donor_data = hosp_dict[donor_id]
-                    donor_surplus = donor_data['inv'][i] - (donor_data['thresholds'][i] + 5)
+                    donor_surplus = donor_data['inv'][i] - donor_data['thresholds'][i]
                     avail_trucks = truck_dict.get(donor_id, {}).get('avail', 0)
 
                     if donor_surplus > 0 and avail_trucks > 0:
@@ -183,12 +187,7 @@ def resolve_crises():
 
                         add_log(f"🚚 {donor_name} deployed truck to {rec_data['name']} ({bg}).")
 
-                        if (donor_id, receiver_id) not in route_cache:
-                            route_cache[(donor_id, receiver_id)] = get_osrm_route(
-                                donor_data['lat'], donor_data['lon'], rec_data['lat'], rec_data['lon']
-                            )
-
-                        take = min(actual_needed, donor_surplus, 5)
+                        take = min(actual_needed, donor_surplus, take_rate)
                         donor_data['inv'][i] -= take
                         rec_data['inv'][i] += take
                         actual_needed -= take
@@ -196,7 +195,7 @@ def resolve_crises():
 
                         donors_used.append({
                             'donor_id': donor_id, 'bg': bg, 'amount': take,
-                            'route': route_cache[(donor_id, receiver_id)]
+                            'route': [[donor_data['lat'], donor_data['lon']], [rec_data['lat'], rec_data['lon']]]
                         })
 
         if donors_used:
@@ -205,6 +204,7 @@ def resolve_crises():
                 'donors': donors_used
             })
 
+    # Execute Hospital Inventory Updates
     if updates_needed:
         bulk_data = [(*inv, sum(inv), hid) for hid, inv in updates_needed.items()]
         cursor.executemany("""UPDATE hospitals
@@ -220,11 +220,16 @@ def resolve_crises():
                               WHERE id = ?""", bulk_data)
         conn.commit()
 
+    # Execute Truck Database Updates
     if trucks_to_update:
-        truck_data = [(data['avail'], data['transit'], hid) for hid, data in trucks_to_update.items()]
-        t_cursor.executemany("UPDATE trucks SET Available_Trucks=?, In_Transit=? WHERE Hospital_id=?", truck_data)
-        t_conn.commit()
-        pd.read_sql("SELECT * FROM trucks", t_conn).to_csv("truck_availability.csv", index=False)
+        try:
+            truck_data = [(data['avail'], data['transit'], hid) for hid, data in trucks_to_update.items()]
+            t_cursor = t_conn.cursor()
+            t_cursor.executemany("UPDATE trucks SET Available_Trucks=?, In_Transit=? WHERE Hospital_id=?", truck_data)
+            t_conn.commit()
+            pd.read_sql("SELECT * FROM trucks", t_conn).to_csv("truck_availability.csv", index=False)
+        except:
+            pass
 
     conn.close()
     try:
@@ -239,10 +244,11 @@ def resolve_crises():
 
 
 def run_supply_network():
-    print("Starting Advanced Supply Engine (Truck Logistics & OSRM Routing)...")
+    print("Starting Optimized Supply Engine (Straight Lines & Adjustable Timescale)...")
     while True:
+        ts = get_timescale()
         resolve_crises()
-        time.sleep(1)
+        time.sleep(1.0 / ts)
 
 
 if __name__ == '__main__':
