@@ -6,7 +6,7 @@ Hospital_id,hospital_name,in_crisis,crisis_type
 161,Mallige Medical Centre,no,
 162,Government Maternity Hospital,no,
 163,Soujanya Clinic,no,
-164,Hospital,no,
+164,Hospital,yes,3.0
 165,Suprabha Hospital,no,
 166,Sangolli Nursing Home,no,
 167,Diacon Hospital,no,
@@ -116,7 +116,7 @@ Hospital_id,hospital_name,in_crisis,crisis_type
 272,Srinidhi Health Centre,no,
 273,Orthopedic & Eye Care Center,no,
 274,ESI Hospital,no,
-275,Ramani Orthopaedic Hospital,no,None
+275,Ramani Orthopaedic Hospital,no,
 276,Atharva Ayurdhama Ayurvedic Hospital,no,
 277,RICH CARE HOMEOPATHY,no,
 278,Poornayu Ayurveda Hospital,no,
